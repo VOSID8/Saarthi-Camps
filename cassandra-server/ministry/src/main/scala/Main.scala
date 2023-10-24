@@ -13,8 +13,10 @@ import org.apache.log4j.Level
 object main extends App {
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
 
-  org.apache.log4j.Logger.getLogger("org.apache.kafka.clients.consumer.Consumer")
-  .setLevel(Level.ERROR)
+  // System.setProperty("log4j.configuration", "C:/Projects/Saarthi-Camps/cassandra-server/ministry/log4j.properties")
+
+  // org.apache.log4j.Logger.getLogger("org.apache.kafka.clients.consumer.Consumer")
+  // .setLevel(Level.ERROR)
 
   val spark = SparkSession.builder()
       .master("local[3]")
@@ -27,7 +29,7 @@ object main extends App {
       .config("spark.sql.catalog.lh", "com.datastax.spark.connector.datasource.CassandraCatalog")
       .getOrCreate()
 
-  //spark.sparkContext.setLogLevel("ERROR")
+  spark.sparkContext.setLogLevel("ERROR")
   import spark.implicits._
   
   val kafkaStreamDF = spark
@@ -47,15 +49,18 @@ object main extends App {
     .select(from_json($"value", schema).as("data"))
     .select("data.*")
 
-  jsonStreamDF.writeStream
+  val invoiceWriterQuery = jsonStreamDF.writeStream
     .outputMode("append")
     //.format("console")
     .foreachBatch((batchDF: org.apache.spark.sql.DataFrame, batchId: Long) => {
-      // Process the batchDF as needed (e.g., write to Cassandra)
       batchDF.show()
     })
+    .trigger(Trigger.ProcessingTime("1 minute"))
     .start()
-    .awaitTermination()
+  
+  logger.info("Listening to Kafka")
+  invoiceWriterQuery.awaitTermination()
 
 
 }
+
