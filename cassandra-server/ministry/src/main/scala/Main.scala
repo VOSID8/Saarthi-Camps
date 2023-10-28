@@ -48,12 +48,35 @@ object main extends App {
     .selectExpr("CAST(value AS STRING)")
     .select(from_json($"value", schema).as("data"))
     .select("data.*")
+  val aggDF = jsonStreamDF
+    .groupBy($"id")
+    .agg(
+      map_concat(collect_list($"Medicines"), lit(" ")).as("MergedMedicines"),
+      max($"Urgency").as("MaxUrgency")
+    )
 
-  val invoiceWriterQuery = jsonStreamDF.writeStream
+  val invoiceWriterQuery = aggDF.writeStream
     .outputMode("append")
-    //.format("console")
     .foreachBatch((batchDF: org.apache.spark.sql.DataFrame, batchId: Long) => {
-      batchDF.show()
+      //val df = spark.createDataFrame(spark.sparkContext.parallelize(rows), schema)
+      
+      val stationsDB = spark.read
+        .format("org.apache.spark.sql.cassandra")
+        .option("keyspace", "camp_db")
+        .option("table", "stations")
+        .load()
+
+      val aggDF = batchDF.select()
+
+      
+      //batchDF.show()
+      // batchDF.write
+      //   .format("org.apache.spark.sql.cassandra")
+      //   .options(Map("keyspace" -> "camp_db", "table" -> "stations")) 
+      //   .mode("append")
+      //   .save()
+
+
     })
     .trigger(Trigger.ProcessingTime("1 minute"))
     .start()
