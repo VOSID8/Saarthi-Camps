@@ -1103,3 +1103,178 @@ WARNING: Unmatched cancel notification for request id 1187
 2023.10.25 00:41:57 INFO  Shutting down server
 2023.10.25 00:41:57 INFO  shutting down Metals
 2023.10.25 00:41:57 INFO  Exiting server
+2023.10.28 17:03:20 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.83.1.
+2023.10.28 17:03:22 WARN  Build server is not auto-connectable.
+2023.10.28 17:03:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:03:32 INFO  no build target found for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.28 17:03:36 INFO  time: code lens generation in 14s
+Oct 28, 2023 5:05:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 29
+2023.10.28 17:05:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:05:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:05:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:06:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 28, 2023 5:09:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 88
+2023.10.28 17:09:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 28, 2023 5:09:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 99
+2023.10.28 17:09:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:09:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:09:52 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:10:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:10:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:10:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:10:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:10:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:10:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 28, 2023 5:10:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 220
+2023.10.28 17:12:00 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:12:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:12:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:12:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 28, 2023 5:13:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 344
+2023.10.28 17:13:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:14:14 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:14:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:14:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:14:47 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:14:51 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:15:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:16:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:16:11 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:16:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:16:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:16:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:21:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:21:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:23:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:23:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:23:47 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:23:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:23:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.28 17:23:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 14:11:21 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.83.1.
+2023.10.29 14:11:27 WARN  Build server is not auto-connectable.
+2023.10.29 14:11:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 14:11:36 INFO  no build target found for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.29 14:11:41 INFO  time: code lens generation in 12s
+2023.10.29 14:14:45 INFO  Shutting down server
+2023.10.29 14:14:45 INFO  shutting down Metals
+2023.10.29 14:14:45 INFO  Exiting server
+2023.10.29 15:28:22 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.83.1.
+2023.10.29 15:28:26 WARN  Build server is not auto-connectable.
+2023.10.29 15:28:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:28:35 INFO  no build target found for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.29 15:28:39 INFO  time: code lens generation in 12s
+2023.10.29 15:28:39 INFO  time: code lens generation in 12s
+2023.10.29 15:28:39 INFO  time: code lens generation in 5.96s
+2023.10.29 15:38:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 29, 2023 3:38:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 65
+2023.10.29 15:38:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:39:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:39:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:39:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:40:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:40:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:40:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:42:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:43:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:44:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:44:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:44:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:54:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:54:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:54:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:55:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:55:21 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:55:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:55:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:55:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:55:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:57:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:57:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:57:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:21 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:58:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 29, 2023 3:58:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 560
+2023.10.29 15:59:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:59:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:59:11 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:59:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:59:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:59:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 15:59:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:20:14 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:20:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:20:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:20:55 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:21:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:23:32 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:23:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:23:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:23:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:23:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.29 19:23:52 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 12:20:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 12:20:52 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:35:58 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 30, 2023 2:36:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 882
+2023.10.30 14:36:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:36:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:36:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:36:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 30, 2023 2:36:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 935
+2023.10.30 14:36:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:36:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:37:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:37:03 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.10.30 14:39:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Oct 30, 2023 2:45:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.10.31 17:53:47 INFO  Shutting down server
+2023.10.31 17:53:47 INFO  shutting down Metals
+2023.10.31 17:53:47 INFO  Exiting server
+2023.11.01 11:07:05 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.83.1.
+2023.11.01 11:07:08 WARN  Build server is not auto-connectable.
+2023.11.01 11:10:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Nov 01, 2023 11:10:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.11.01 11:10:45 INFO  no build target found for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.1
+Nov 01, 2023 11:10:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2023.11.01 11:10:51 INFO  time: code lens generation in 5.01s
+2023.11.01 11:10:51 INFO  time: code lens generation in 13s
+2023.11.01 11:15:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:15:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:16:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:18:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:18:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:18:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:31:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:34:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:34:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:34:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:35:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:35:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.01 11:37:50 INFO  Shutting down server
+2023.11.01 11:37:50 INFO  shutting down Metals
+2023.11.01 11:37:50 INFO  Exiting server

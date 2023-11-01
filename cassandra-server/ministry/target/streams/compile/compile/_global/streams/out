@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala:56:51: value cast is not a member of org.apache.spark.sql.DataFrame[0m
+[0m[[0m[31merror[0m] [0m[0m    .withColumn("campid", substring($"id", 0, 2)).cast(IntegerType)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

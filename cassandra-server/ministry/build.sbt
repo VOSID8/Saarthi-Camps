@@ -12,6 +12,7 @@ lazy val root = project
     libraryDependencies += "org.apache.spark" %% "spark-core" % "3.0.0",
     libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.0.0",
     libraryDependencies += "com.datastax.spark" %% "spark-cassandra-connector" % "3.0.0",
+    //libraryDependencies += "org.apache.cassandra" % "cassandra-all" % "3.11.11",
     libraryDependencies += "joda-time" % "joda-time" % "2.10.2",
     libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.0.0"
 

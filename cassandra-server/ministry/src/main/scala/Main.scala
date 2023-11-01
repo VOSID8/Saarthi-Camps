@@ -8,6 +8,8 @@ import org.apache.spark.sql.streaming.StreamingQueryListener
 import org.apache.spark.sql.streaming.StreamingQueryListener.QueryProgressEvent
 import org.apache.spark.sql.streaming.StreamingQueryListener.QueryStartedEvent
 import org.apache.log4j.Level
+import org.apache.spark.sql.cassandra._
+import org.apache.spark.sql.DataFrame
 
 
 object main extends App {
@@ -25,8 +27,8 @@ object main extends App {
       .config("spark.sql.shuffle.partitions", 2)
       .config("spark.cassandra.connection.host", "localhost")
       .config("spark.cassandra.connection.port", "9042")
-      .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")
-      .config("spark.sql.catalog.lh", "com.datastax.spark.connector.datasource.CassandraCatalog")
+      // .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")
+      // .config("spark.sql.catalog.lh", "com.datastax.spark.connector.datasource.CassandraCatalog")
       .getOrCreate()
 
   spark.sparkContext.setLogLevel("ERROR")
@@ -40,41 +42,35 @@ object main extends App {
     .load()
 
   val schema = StructType(Seq(
-    StructField("id", StringType, nullable = false),
-    StructField("Medicines", MapType(StringType, IntegerType), nullable = false),
-    StructField("Urgency", IntegerType, nullable = false)
+    StructField("id", StringType,nullable=false),
+    StructField("medicines", MapType(StringType, IntegerType),nullable=false),
+    StructField("urgency", IntegerType,nullable=false),
+    StructField("campid", StringType,nullable=false),
   ))
   val jsonStreamDF = kafkaStreamDF
     .selectExpr("CAST(value AS STRING)")
     .select(from_json($"value", schema).as("data"))
     .select("data.*")
+
   val aggDF = jsonStreamDF
-    .groupBy($"id")
-    .agg(
-      map_concat(collect_list($"Medicines"), lit(" ")).as("MergedMedicines"),
-      max($"Urgency").as("MaxUrgency")
-    )
+    .withColumn("campid", substring($"id", 0, 2))
+
+  // val aggDFf = aggDF
+  //   .withColumn("campid", $"campid".cast(IntegerType))
 
   val invoiceWriterQuery = aggDF.writeStream
     .outputMode("append")
     .foreachBatch((batchDF: org.apache.spark.sql.DataFrame, batchId: Long) => {
       //val df = spark.createDataFrame(spark.sparkContext.parallelize(rows), schema)
-      
-      val stationsDB = spark.read
+      batchDF.printSchema()
+      batchDF.show()
+
+      batchDF.write
         .format("org.apache.spark.sql.cassandra")
-        .option("keyspace", "camp_db")
-        .option("table", "stations")
-        .load()
-
-      val aggDF = batchDF.select()
-
-      
-      //batchDF.show()
-      // batchDF.write
-      //   .format("org.apache.spark.sql.cassandra")
-      //   .options(Map("keyspace" -> "camp_db", "table" -> "stations")) 
-      //   .mode("append")
-      //   .save()
+        .options(Map("keyspace" -> "camp_db", "table" -> "main")) 
+        .mode("append")
+        .save()
+      batchDF.show()
 
 
     })
