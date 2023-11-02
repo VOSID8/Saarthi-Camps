@@ -42,10 +42,11 @@ object main extends App {
     .load()
 
   val schema = StructType(Seq(
-    StructField("id", StringType,nullable=false),
-    StructField("medicines", MapType(StringType, IntegerType),nullable=false),
-    StructField("urgency", IntegerType,nullable=false),
-    StructField("campid", StringType,nullable=false),
+    StructField("refugeeid", StringType,nullable=false),
+    StructField("medicinename", StringType,nullable=false),
+    StructField("medicinequantity", IntegerType,nullable=false),
+    StructField("medicineurgency", IntegerType,nullable=false),
+    StructField("campid", StringType,nullable=false)
   ))
   val jsonStreamDF = kafkaStreamDF
     .selectExpr("CAST(value AS STRING)")
@@ -53,7 +54,7 @@ object main extends App {
     .select("data.*")
 
   val aggDF = jsonStreamDF
-    .withColumn("campid", substring($"id", 0, 2))
+    .withColumn("campid", substring($"refugeeid", 0, 2))
 
   // val aggDFf = aggDF
   //   .withColumn("campid", $"campid".cast(IntegerType))

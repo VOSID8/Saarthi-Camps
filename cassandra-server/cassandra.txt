@@ -1,12 +1,12 @@
 CREATE KEYSPACE camp_db WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 USE camp_db;
-CREATE TABLE main(id text PRIMARY KEY, Medicines MAP<text,int>, Urgency int, CampId text);
+CREATE TABLE main(RefugeeId text PRIMARY KEY, MedicineName text, MedicineQuantity int, MedicineUrgency, CampId text);
 
-INSERT INTO main (id, Medicines, Urgency, CampId)
+INSERT INTO main (id, MedicineName, MedicineQuantity, MedicineUrgency, CampId)
 VALUES (AH47, {'A':2,'B':2}, 1,AH);
 
 
-{"id":"AH45","Medicines":{"A":2,"B":2}, "Urgency":2}
+{"refugeeid": "AM11","medicinename": "paracetamol","medicinequantity": 1,"medicineurgency": 1}
 
 
 

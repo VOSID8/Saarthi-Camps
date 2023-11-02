@@ -1,4 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala:56:51: value cast is not a member of org.apache.spark.sql.DataFrame[0m
-[0m[[0m[31merror[0m] [0m[0m    .withColumn("campid", substring($"id", 0, 2)).cast(IntegerType)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala:49:5: value StructField is not a member of org.apache.spark.sql.types.StructField[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value StructField'?[0m
+[0m[[0m[31merror[0m] [0m[0m    StructField("campid", StringType,nullable=false)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala:49:38: not found: value nullable[0m
+[0m[[0m[31merror[0m] [0m[0m    StructField("campid", StringType,nullable=false)[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

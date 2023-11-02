@@ -1,29 +1,50 @@
-[0m[[0m[31merror[0m] [0m[0morg.apache.spark.sql.streaming.StreamingQueryException: Failed to find data source: org.apache.spark.sql.cassandra. Please find packages at http://spark.apache.org/third-party-projects.html[0m
+[0m[[0m[31merror[0m] [0m[0morg.apache.spark.sql.streaming.StreamingQueryException: Attempting to write to C* Table but missing[0m
+[0m[[0m[31merror[0m] [0m[0mprimary key columns: [refugeeid][0m
 [0m[[0m[31merror[0m] [0m[0m=== Streaming Query ===[0m
-[0m[[0m[31merror[0m] [0m[0mIdentifier: [id = cc53f014-89f3-4697-b817-0f7bf1400106, runId = c12739cd-e5c1-41cd-b2d9-5cb05f34df29][0m
+[0m[[0m[31merror[0m] [0m[0mIdentifier: [id = 865efb39-ef8c-478e-afd5-3f44473e308e, runId = 03146008-7093-4cb0-94da-7f21e7278e89][0m
 [0m[[0m[31merror[0m] [0m[0mCurrent Committed Offsets: {}[0m
-[0m[[0m[31merror[0m] [0m[0mCurrent Available Offsets: {KafkaV2[Subscribe[CampInfo]]: {"CampInfo":{"0":2}}}[0m
+[0m[[0m[31merror[0m] [0m[0mCurrent Available Offsets: {KafkaV2[Subscribe[CampInfo]]: {"CampInfo":{"0":0}}}[0m
 [0m[[0m[31merror[0m] [0m[0m[0m
 [0m[[0m[31merror[0m] [0m[0mCurrent State: ACTIVE[0m
 [0m[[0m[31merror[0m] [0m[0mThread State: RUNNABLE[0m
 [0m[[0m[31merror[0m] [0m[0m[0m
 [0m[[0m[31merror[0m] [0m[0mLogical Plan:[0m
-[0m[[0m[31merror[0m] [0m[0mProject [id#25, medicines#26, urgency#27, cast(campid#33 as int) AS campid#38][0m
-[0m[[0m[31merror[0m] [0m[0m+- Project [id#25, medicines#26, urgency#27, substring(cast(id#25 as string), 0, 2) AS campid#33][0m
-[0m[[0m[31merror[0m] [0m[0m   +- Project [data#23.id AS id#25, data#23.medicines AS medicines#26, data#23.urgency AS urgency#27, data#23.campid AS campid#28][0m
-[0m[[0m[31merror[0m] [0m[0m      +- Project [from_json(StructField(id,IntegerType,true), StructField(medicines,MapType(StringType,IntegerType,true),true), StructField(urgency,IntegerType,true), StructField(campid,IntegerType,true), value#21, Some(Asia/Calcutta)) AS data#23][0m
-[0m[[0m[31merror[0m] [0m[0m         +- Project [cast(value#8 as string) AS value#21][0m
-[0m[[0m[31merror[0m] [0m[0m            +- StreamingDataSourceV2Relation [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaScan@1f160430, KafkaV2[Subscribe[CampInfo]][0m
+[0m[[0m[31merror[0m] [0m[0mProject [RefugeeId#25, MedicineName#26, MedicineQuantity#27, MedicineUrgency#28, substring(RefugeeId#25, 0, 2) AS campid#35][0m
+[0m[[0m[31merror[0m] [0m[0m+- Project [data#23.RefugeeId AS RefugeeId#25, data#23.MedicineName AS MedicineName#26, data#23.MedicineQuantity AS MedicineQuantity#27, data#23.MedicineUrgency AS MedicineUrgency#28, data#23.campid AS campid#29][0m
+[0m[[0m[31merror[0m] [0m[0m   +- Project [from_json(StructField(RefugeeId,StringType,false), StructField(MedicineName,StringType,false), StructField(MedicineQuantity,IntegerType,false), StructField(MedicineUrgency,IntegerType,false), StructField(campid,StringType,false), value#21, Some(Asia/Calcutta)) AS data#23][0m
+[0m[[0m[31merror[0m] [0m[0m      +- Project [cast(value#8 as string) AS value#21][0m
+[0m[[0m[31merror[0m] [0m[0m         +- StreamingDataSourceV2Relation [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaScan@3dc7ed84, KafkaV2[Subscribe[CampInfo]][0m
 [0m[[0m[31merror[0m] [0m[0m[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:355)[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:245)[0m
-[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.ClassNotFoundException: Failed to find data source: org.apache.spark.sql.cassandra. Please find packages at http://spark.apache.org/third-party-projects.html[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSource(DataSource.scala:674)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSourceV2(DataSource.scala:728)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.lookupV2Provider(DataFrameWriter.scala:948)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:285)[0m
-[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1(Main.scala:71)[0m
-[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1$adapted(Main.scala:63)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: com.datastax.spark.connector.datasource.CassandraCatalogException: Attempting to write to C* Table but missing[0m
+[0m[[0m[31merror[0m] [0m[0mprimary key columns: [refugeeid][0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraWriteBuilder.<init>(CassandraWriteBuilder.scala:44)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraTable.newWriteBuilder(CassandraTable.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.BatchWriteHelper.newWriteBuilder(WriteToDataSourceV2Exec.scala:346)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.BatchWriteHelper.newWriteBuilder$(WriteToDataSourceV2Exec.scala:341)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.AppendDataExec.newWriteBuilder(WriteToDataSourceV2Exec.scala:253)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.AppendDataExec.run(WriteToDataSourceV2Exec.scala:259)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.doExecute(V2CommandExec.scala:54)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:175)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:213)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:210)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:171)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:122)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:944)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:100)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:160)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:87)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:763)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:944)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:335)[0m
+[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1(Main.scala:72)[0m
+[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1$adapted(Main.scala:64)[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:36)[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:573)[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:100)[0m
@@ -46,56 +67,19 @@
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:185)[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:334)[0m
 [0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:245)[0m
-[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.ClassNotFoundException: org.apache.spark.sql.cassandra.DefaultSource[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.ManagedClassLoader.findClass(ManagedClassLoader.java:103)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$lookupDataSource$5(DataSource.scala:648)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$lookupDataSource$4(DataSource.scala:648)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.util.Failure.orElse(Try.scala:224)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSource(DataSource.scala:648)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSourceV2(DataSource.scala:728)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.lookupV2Provider(DataFrameWriter.scala:948)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:285)[0m
-[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1(Main.scala:71)[0m
-[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1$adapted(Main.scala:63)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:36)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:573)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:100)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:160)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:87)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:763)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$15(MicroBatchExecution.scala:571)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:352)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:350)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:571)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:223)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:352)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:350)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:191)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:185)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:334)[0m
-[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:245)[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) org.apache.spark.sql.streaming.StreamingQueryException: Failed to find data source: org.apache.spark.sql.cassandra. Please find packages at http://spark.apache.org/third-party-projects.html[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) org.apache.spark.sql.streaming.StreamingQueryException: Attempting to write to C* Table but missing[0m
+[0m[[0m[31merror[0m] [0m[0mprimary key columns: [refugeeid][0m
 [0m[[0m[31merror[0m] [0m[0m=== Streaming Query ===[0m
-[0m[[0m[31merror[0m] [0m[0mIdentifier: [id = cc53f014-89f3-4697-b817-0f7bf1400106, runId = c12739cd-e5c1-41cd-b2d9-5cb05f34df29][0m
+[0m[[0m[31merror[0m] [0m[0mIdentifier: [id = 865efb39-ef8c-478e-afd5-3f44473e308e, runId = 03146008-7093-4cb0-94da-7f21e7278e89][0m
 [0m[[0m[31merror[0m] [0m[0mCurrent Committed Offsets: {}[0m
-[0m[[0m[31merror[0m] [0m[0mCurrent Available Offsets: {KafkaV2[Subscribe[CampInfo]]: {"CampInfo":{"0":2}}}[0m
+[0m[[0m[31merror[0m] [0m[0mCurrent Available Offsets: {KafkaV2[Subscribe[CampInfo]]: {"CampInfo":{"0":0}}}[0m
 [0m[[0m[31merror[0m] [0m[0m[0m
 [0m[[0m[31merror[0m] [0m[0mCurrent State: ACTIVE[0m
 [0m[[0m[31merror[0m] [0m[0mThread State: RUNNABLE[0m
 [0m[[0m[31merror[0m] [0m[0m[0m
 [0m[[0m[31merror[0m] [0m[0mLogical Plan:[0m
-[0m[[0m[31merror[0m] [0m[0mProject [id#25, medicines#26, urgency#27, cast(campid#33 as int) AS campid#38][0m
-[0m[[0m[31merror[0m] [0m[0m+- Project [id#25, medicines#26, urgency#27, substring(cast(id#25 as string), 0, 2) AS campid#33][0m
-[0m[[0m[31merror[0m] [0m[0m   +- Project [data#23.id AS id#25, data#23.medicines AS medicines#26, data#23.urgency AS urgency#27, data#23.campid AS campid#28][0m
-[0m[[0m[31merror[0m] [0m[0m      +- Project [from_json(StructField(id,IntegerType,true), StructField(medicines,MapType(StringType,IntegerType,true),true), StructField(urgency,IntegerType,true), StructField(campid,IntegerType,true), value#21, Some(Asia/Calcutta)) AS data#23][0m
-[0m[[0m[31merror[0m] [0m[0m         +- Project [cast(value#8 as string) AS value#21][0m
-[0m[[0m[31merror[0m] [0m[0m            +- StreamingDataSourceV2Relation [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaScan@1f160430, KafkaV2[Subscribe[CampInfo]][0m
+[0m[[0m[31merror[0m] [0m[0mProject [RefugeeId#25, MedicineName#26, MedicineQuantity#27, MedicineUrgency#28, substring(RefugeeId#25, 0, 2) AS campid#35][0m
+[0m[[0m[31merror[0m] [0m[0m+- Project [data#23.RefugeeId AS RefugeeId#25, data#23.MedicineName AS MedicineName#26, data#23.MedicineQuantity AS MedicineQuantity#27, data#23.MedicineUrgency AS MedicineUrgency#28, data#23.campid AS campid#29][0m
+[0m[[0m[31merror[0m] [0m[0m   +- Project [from_json(StructField(RefugeeId,StringType,false), StructField(MedicineName,StringType,false), StructField(MedicineQuantity,IntegerType,false), StructField(MedicineUrgency,IntegerType,false), StructField(campid,StringType,false), value#21, Some(Asia/Calcutta)) AS data#23][0m
+[0m[[0m[31merror[0m] [0m[0m      +- Project [cast(value#8 as string) AS value#21][0m
+[0m[[0m[31merror[0m] [0m[0m         +- StreamingDataSourceV2Relation [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaScan@3dc7ed84, KafkaV2[Subscribe[CampInfo]][0m
