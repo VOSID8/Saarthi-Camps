@@ -18,10 +18,10 @@ const orderSchema = mongoose.Schema({
         }
     },
     medicineUrgency: {
-        type: String,
+        type: Number,
         required: true,
-        enum: ["low", "normal", "high"],
-        default: "normal"
+        enum: [0, 1, 2],
+        default: 0
     },
     refugeeId: {
         type: String,

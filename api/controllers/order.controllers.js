@@ -1,6 +1,7 @@
 const Order = require("../models/order.models");
 const Counter = require("../models/counter.models");
 const asyncHandler = require("express-async-handler");
+const kafkaSend = require("../services/kafkaUtils");
 
 const orderMedicines = asyncHandler(async (req, res) => {
     const { medicineName, refugeeId } = req.body;
@@ -21,6 +22,7 @@ const orderMedicines = asyncHandler(async (req, res) => {
     }
 
     const newOrder = await Order.create(req.body);
+    await kafkaSend(newOrder.refugeeId, newOrder.medicineName, newOrder.medicineQuantity, newOrder.medicineUrgency);
     res.json(newOrder);
 });
 
