@@ -20,6 +20,10 @@ const refugeeSchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true
+    },
+    imageURL: {
+        type: String,
+        required: true,
     }
 }, { timestamps: true });
 
@@ -28,6 +32,7 @@ refugeeSchema.methods.toJSON = function () {
 
     delete refueeObject._id;
     delete refueeObject.__v;
+    delete refueeObject.imageURL;
     return refueeObject;
 }
 
