@@ -1,9 +1,12 @@
 const Refugee = require("../models/refugee.models");
 const Counter = require("../models/counter.models");
 const asyncHandler = require("express-async-handler");
+const cloudinary = require("../services/cloudinary");
+const fs = require("fs");
 
 const addRefugee = asyncHandler(async (req, res) => {
     const { name, gender, dob } = req.body;
+    console.log(name, gender, dob);
     if (!name || !gender || !dob) {
         res.status(400);
         throw new Error("Name, Gender and Date of Birth are required fields");
@@ -20,7 +23,16 @@ const addRefugee = asyncHandler(async (req, res) => {
         req.body.refugeeId = process.env.CAMP_ID + counter.seqVal;
     }
 
-    const newRefugee = await Refugee.create(req.body);
+    const image = req.files.image;
+    let imageURL;
+    try {
+        const result = await cloudinary.v2.uploader.upload(image.tempFilePath)
+        imageURL = result.url;
+    } catch (e) {
+        throw new Error(e);
+    }
+
+    const newRefugee = await Refugee.create({ ...req.body, imageURL });
     res.json(newRefugee);
 });
 
@@ -33,7 +45,7 @@ const deleteRefugee = asyncHandler(async (req, res) => {
 const getRefugee = asyncHandler(async (req, res) => {
     const { refugeeId } = req.params;
     const refugee = await Refugee.findOne({ refugeeId });
-    if(!refugee){
+    if (!refugee) {
         res.status(404);
         throw new Error("No refugee found with specified id");
     }
@@ -59,10 +71,17 @@ const updateRefugee = asyncHandler(async (req, res) => {
     res.json(refugee);
 });
 
+const getImageOfRefugee = asyncHandler(async (req, res) => {
+    const { refugeeId } = req.params;
+    const { imageURL } = await Refugee.findOne({ refugeeId });
+    res.send(imageURL);
+});
+
 module.exports = {
     addRefugee,
     deleteRefugee,
     getRefugee,
     getAllRefugees,
-    updateRefugee
+    updateRefugee,
+    getImageOfRefugee
 }
