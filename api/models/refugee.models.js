@@ -32,7 +32,6 @@ refugeeSchema.methods.toJSON = function () {
 
     delete refueeObject._id;
     delete refueeObject.__v;
-    delete refueeObject.imageURL;
     return refueeObject;
 }
 
