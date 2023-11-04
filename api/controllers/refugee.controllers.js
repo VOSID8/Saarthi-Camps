@@ -2,7 +2,6 @@ const Refugee = require("../models/refugee.models");
 const Counter = require("../models/counter.models");
 const asyncHandler = require("express-async-handler");
 const cloudinary = require("../services/cloudinary");
-const fs = require("fs");
 
 const addRefugee = asyncHandler(async (req, res) => {
     const { name, gender, dob } = req.body;
