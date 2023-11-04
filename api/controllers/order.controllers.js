@@ -27,8 +27,49 @@ const orderMedicines = asyncHandler(async (req, res) => {
 });
 
 const getAllOrders = asyncHandler(async (req, res) => {
-    const allOrders = await Order.find();
-    res.json(allOrders);
+    //Filter
+    const filterObj = { ...req.query };
+    const excludeFromFilter = ['sort', 'fields', 'page', 'limit'];
+
+    excludeFromFilter.forEach((query) => {
+        delete filterObj[query];
+    });
+    if(!isNaN(filterObj['medicineQuantity'])){
+        filterObj['medicineQuantity'] = parseInt(filterObj['medicineQuantity']);
+    }
+    if(!isNaN(filterObj['medicineUrgency'])){
+        filterObj['medicineUrgency'] = parseInt(filterObj['medicineUrgency']);
+    }
+    let query = Order.find(filterObj);
+
+    //Sort
+    if (req.query.sort) {
+        const sortBy = req.query.sort.split(',').join(' ');
+        query = query.sort(sortBy);
+    }
+    else {
+        query = query.sort("createdAt");
+    }
+
+    //Fields 
+    if (req.query.fields) {
+        const fields = req.query.fields.split(',').join(' ');
+        query = query.select(fields);
+    }
+
+    //Page and limit
+    const page = req.query.page;
+    let limit = req.query.limit;
+    if (!limit) limit = 20;
+
+    const skip = (page - 1) * limit;
+    query = query.skip(skip).limit(limit);
+    if (req.query.page) {
+        const ordersCount = await Order.countDocuments();
+        if (skip >= ordersCount) throw new Error("This page doesn't exist");
+    }
+    const orders = await query;
+    res.json(orders);
 });
 
 const getAllOrdersOfRefugee = asyncHandler(async (req, res) => {
