@@ -2,7 +2,6 @@ const Refugee = require("../models/refugee.models");
 const Counter = require("../models/counter.models");
 const asyncHandler = require("express-async-handler");
 const cloudinary = require("../services/cloudinary");
-const fs = require("fs");
 
 const addRefugee = asyncHandler(async (req, res) => {
     const { name, gender, dob } = req.body;
@@ -53,7 +52,43 @@ const getRefugee = asyncHandler(async (req, res) => {
 });
 
 const getAllRefugees = asyncHandler(async (req, res) => {
-    const refugees = await Refugee.find();
+    //Filter
+    const filterObj = {...req.query};
+    const excludeFromFilter = ['sort', 'fields', 'page', 'limit'];
+    excludeFromFilter.forEach((query) => {
+        delete filterObj[query];
+    });
+    let query = Refugee.find(filterObj);
+
+    //Sort 
+    if (req.query.sort) {
+        const sortBy = req.query.sort.split(',').join(' ');
+        query = query.sort(sortBy);
+    }
+    else {
+        query = query.sort("createdAt");
+    }
+
+    //Fields
+    if (req.query.fields) {
+        const fields = req.query.fields.split(',').join(' ');
+        query = query.select(fields);
+    }
+
+    //Page and limit
+    const page = req.query.page;
+    let limit = req.query.limit;
+    if(!limit) limit = 20;
+
+    const skip = (page - 1) * limit;
+    query = query.skip(skip).limit(limit);
+
+    if(req.query.page){
+        const refugeesCount = await Refugee.countDocuments();
+        if(skip >= refugeesCount) throw new Error("This page does not exist");
+    }
+    
+    const refugees = await query;
     res.json(refugees);
 });
 
