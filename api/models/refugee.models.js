@@ -23,7 +23,7 @@ const refugeeSchema = mongoose.Schema({
     },
     imageURL: {
         type: String,
-        required: true,
+        default: "http://res.cloudinary.com/duhdg3btj/image/upload/v1699264322/tolia398cdxspwlnjzjn.png"
     }
 }, { timestamps: true });
 

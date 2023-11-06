@@ -4,11 +4,14 @@ const asyncHandler = require("express-async-handler");
 const cloudinary = require("../services/cloudinary");
 
 const addRefugee = asyncHandler(async (req, res) => {
-    const { name, gender, dob } = req.body;
-    console.log(name, gender, dob);
-    if (!name || !gender || !dob) {
-        res.status(400);
-        throw new Error("Name, Gender and Date of Birth are required fields");
+    const image = req.files?.image;
+    if (image) {
+        try {
+            const result = await cloudinary.v2.uploader.upload(image.tempFilePath)
+            req.body.imageURL = result.url;
+        } catch (e) {
+            throw new Error(e);
+        }
     }
 
     //generate refugee id
@@ -22,16 +25,7 @@ const addRefugee = asyncHandler(async (req, res) => {
         req.body.refugeeId = process.env.CAMP_ID + counter.seqVal;
     }
 
-    const image = req.files.image;
-    let imageURL;
-    try {
-        const result = await cloudinary.v2.uploader.upload(image.tempFilePath)
-        imageURL = result.url;
-    } catch (e) {
-        throw new Error(e);
-    }
-
-    const newRefugee = await Refugee.create({ ...req.body, imageURL });
+    const newRefugee = await Refugee.create(req.body);
     res.json(newRefugee);
 });
 
@@ -53,7 +47,7 @@ const getRefugee = asyncHandler(async (req, res) => {
 
 const getAllRefugees = asyncHandler(async (req, res) => {
     //Filter
-    const filterObj = {...req.query};
+    const filterObj = { ...req.query };
     const excludeFromFilter = ['sort', 'fields', 'page', 'limit'];
     excludeFromFilter.forEach((query) => {
         delete filterObj[query];
@@ -78,16 +72,16 @@ const getAllRefugees = asyncHandler(async (req, res) => {
     //Page and limit
     const page = req.query.page;
     let limit = req.query.limit;
-    if(!limit) limit = 20;
+    if (!limit) limit = 20;
 
     const skip = (page - 1) * limit;
     query = query.skip(skip).limit(limit);
 
-    if(req.query.page){
+    if (req.query.page) {
         const refugeesCount = await Refugee.countDocuments();
-        if(skip >= refugeesCount) throw new Error("This page does not exist");
+        if (skip >= refugeesCount) throw new Error("This page does not exist");
     }
-    
+
     const refugees = await query;
     res.json(refugees);
 });
