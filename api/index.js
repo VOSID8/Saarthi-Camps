@@ -4,6 +4,7 @@ const connectToDB = require("./dbConnect");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
+const cors = require("cors");
 
 const { notFoundError, responseError } = require("./middlewares/errorHandler");
 const { forceAuth, checkAuth } = require("./middlewares/authentication");
@@ -19,6 +20,7 @@ const tokenRouter = require("./routes/token.routes");
         await connectToDB();
         const app = express();
 
+        app.use(cors());
         app.use(morgan("dev"));
         app.use(cookieParser());
         app.use(fileUpload({ useTempFiles: true }));
