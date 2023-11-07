@@ -5,8 +5,8 @@ const { validateAccessToken } = require("../security/accessTokenUtils.js");
 const forceAuth = () => {
     return asyncHandler(async (req, res, next) => {
         const accessToken = req.header("Authorization")?.replace("Bearer ", "");
-        const refreshToken = req.cookies["refreshToken"];
-        if (!accessToken || !refreshToken) {
+        // const refreshToken = req.cookies["refreshToken"];
+        if (!accessToken) {
             res.status(401);
             throw new Error("Client is currently logged out");
         }
@@ -18,8 +18,9 @@ const forceAuth = () => {
             throw new Error();
         }
 
-        req.refreshToken = refreshToken;
+        // req.refreshToken = refreshToken;
         req.user = user;
+        console.log("auth");
         next();
     });
 };
@@ -27,14 +28,14 @@ const forceAuth = () => {
 const checkAuth= () => {
     return async (req, res, next) => {
         const accessToken = req.header("Authorization")?.replace("Bearer ", "");
-        const refreshToken = req.cookies["refreshToken"];
-        if (!accessToken || !refreshToken) return next();
+        // const refreshToken = req.cookies["refreshToken"];
+        if (!accessToken) return next();
 
         try {
             const userPayload = validateAccessToken(accessToken);
             const user = await User.findById(userPayload.id);
             req.user = user;
-            req.refreshToken = refreshToken;
+            // req.refreshToken = refreshToken;
             next();
         } catch (error) {
             next();

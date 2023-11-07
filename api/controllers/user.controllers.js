@@ -7,6 +7,7 @@ const { generateAccessToken } = require("../security/accessTokenUtils");
 const { generateRefreshToken } = require("../security/refreshTokenUtils");
 
 const createDeoCredentials = asyncHandler(async (req, res) => {
+    console.log("gyu");
     // create random password of 6 characters
     const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     const password_length = 6;
@@ -15,13 +16,24 @@ const createDeoCredentials = asyncHandler(async (req, res) => {
         var rnum = Math.floor(Math.random() * chars.length);
         password += chars.substring(rnum, rnum + 1);
     }
-
+    console.log("gyu");
     req.body.password = password;
     req.body.role = "dataEntryOperator";
-
-    //send email to deo with temporary password
-    sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
-    const user = await User.create(req.body);
+    console.log("gyu");
+    let user = null;
+    console.log("gyu");
+    try{
+        console.log("gyu");
+        user = await User.create(req.body);
+        console.log("HAey");
+        //send email to deo with temporary password
+        sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
+        console.log("HAey");
+   
+    } catch(e){
+        res.status(400);
+        throw new Error("Duplicate email address");
+    }
     res.json(user);
 });
 
@@ -42,6 +54,7 @@ const handleLogin = asyncHandler(async (req, res) => {
 
         res.cookie("refreshToken", refreshToken, {
             httpOnly: true,
+            domain: 'localhost:5173',
             secure: true,
             maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
         });

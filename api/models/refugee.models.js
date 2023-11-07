@@ -25,13 +25,15 @@ const refugeeSchema = mongoose.Schema({
         type: String,
         default: "http://res.cloudinary.com/duhdg3btj/image/upload/v1699264322/tolia398cdxspwlnjzjn.png"
     }
-}, { timestamps: true });
+}, { timestamps: true }); 
 
 refugeeSchema.methods.toJSON = function () {
     const refueeObject = this.toObject();
 
     delete refueeObject._id;
     delete refueeObject.__v;
+    delete refueeObject.createdAt;
+    delete refueeObject.updatedAt;
     return refueeObject;
 }
 
