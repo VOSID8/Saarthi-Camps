@@ -20,7 +20,6 @@ const forceAuth = () => {
 
         // req.refreshToken = refreshToken;
         req.user = user;
-        console.log("auth");
         next();
     });
 };
