@@ -1,17 +1,21 @@
 const kafka = require("./kafkaClient");
 
-const kafkaSend = async (refugeeId, medicineName, medicineQuantity, medicineUrgency) => {
+const kafkaSend = async (refugeeid, medicinename, medicinequantity, medicineurgency) => {
     const producer = kafka.producer();
 
     try {
         await producer.connect();
 
-        await producer.send({
-            topic: "campInfo",
+        const result = await producer.send({
+            topic: "CampInfo",
             messages: [{
+                partition: 0,
                 key: "order",
                 value: JSON.stringify({
-                    refugeeId, medicineName, medicineQuantity, medicineUrgency
+                    refugeeid,
+                    medicinename,
+                    medicinequantity,
+                    medicineurgency
                 }),
             }],
         });
