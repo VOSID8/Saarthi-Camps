@@ -10,7 +10,8 @@ const {
     handleLogout,
     handleUpdate,
     forgotPassword,
-    resetPassword
+    resetPassword,
+    getUserProfile
 } = require("../controllers/user.controllers");
 
 router.post("/create-deo", forceAuth(), adminOnly(), createDeoCredentials);
@@ -20,5 +21,6 @@ router.patch("/update-password", forceAuth(), updatePassword);
 router.patch("/update", forceAuth(), handleUpdate);
 router.post("/forgot-password", forceAuth(), forgotPassword);
 router.patch("/:id/:token", resetPassword);
+router.get("/profile", forceAuth(), getUserProfile);
 
 module.exports = router;

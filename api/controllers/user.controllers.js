@@ -133,6 +133,10 @@ const resetPassword = asyncHandler(async (req, res) => {
     }
 });
 
+const getUserProfile = asyncHandler(async (req, res) => {
+    res.json(req.user);
+});
+
 module.exports = {
     createDeoCredentials,
     handleLogin,
@@ -140,5 +144,6 @@ module.exports = {
     updatePassword,
     handleUpdate,
     forgotPassword,
-    resetPassword
+    resetPassword,
+    getUserProfile
 }
