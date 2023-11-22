@@ -107,11 +107,11 @@ function Registration() {
   const renderForm = (
     <div className="">
       <form onSubmit={handleSubmit} className="justify-items-start">
-        <div className="w-[100px] h-[100px] rounded-full">
+        <div className="w-[100px] h-[100px] rounded-full overflow-hidden">
           <label className="w-[100%] h-[100%] relative">
             {imagePreview ? (
               <>
-                <img src={imagePreview} alt="Cover Photo" className="" />
+                <img src={imagePreview} alt="Cover Photo" className="contain" />
                 <button onClick={handleRemoveImage} className="absolute top-0 right-0 mt-2 mr-2 px-2 py-1 rounded-md">
                   Change
                 </button>

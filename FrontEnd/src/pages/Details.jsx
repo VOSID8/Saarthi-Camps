@@ -47,8 +47,8 @@ function RefugeeDetails() {
       <button onClick={handleSearch}>Search</button>
 
       {refugeeDetails && (
-        <div>
-          <img src={refugeeDetails.imageURL} alt="" />
+        <div className=''>
+          <img src={refugeeDetails.imageURL} alt=""  className='w-[300px] h-[300px] m-auto'/>
           <h3>Name: {refugeeDetails.name}</h3>
           <p>Gender: {refugeeDetails.gender}</p>
           <p>Date of Birth: {new Date(refugeeDetails.dob).toLocaleDateString()}</p>

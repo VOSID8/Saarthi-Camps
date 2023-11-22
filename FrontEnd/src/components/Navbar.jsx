@@ -70,6 +70,10 @@ function Navbar() {
                         <Link to="/add-medicine" className={` py-3 px-6 hover:bg-yellow ${activePage === "/add-medicine" ? "active  border-b-2" : ""}`}>
                             ADD MEDICINE
                         </Link>
+                        <Seperator />
+                        <Link to="/view-details" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
+                            VIEW DETAILS
+                        </Link>
                     </>
                     }  
                     
@@ -80,10 +84,7 @@ function Navbar() {
                         <Link to="/managedeo" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
                             ADD DEO
                         </Link>
-                        <Seperator />
-                        <Link to="/view-details" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
-                            VIEW DETAILS
-                        </Link>
+                        
                     </>
                         
                     }

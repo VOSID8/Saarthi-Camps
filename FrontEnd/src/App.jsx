@@ -42,7 +42,7 @@ function AppWithSidebar() {
         <Route path='/home' element={<Home />} />
         <Route path='/add-refugee' element={<RefugeeForm />} />
         <Route path='/add-medicine' element={<MedForm />} />
-        {authCtx.isAdmin && <Route path='/view-details' element={<Details />} />}
+        <Route path='/view-details' element={<Details />} />
         <Route path='/managedeo' element={<ManageDEO />}></Route>
       </Routes>
     </div>
