@@ -7,7 +7,7 @@ export default function ManageDEO () {
 }
 
 import { useRef, useState, useEffect, useContext } from "react";
-import AuthContext from "../components/AuthProvider";
+import AuthContext from "../components/AuthProvider2";
 import axios from "axios"
 import api_url from "../config";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +33,8 @@ const CreateDEOForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        console.log(email);
+        console.log(name);
         const token = localStorage.getItem("accessToken");
         const config = {
             headers: {
@@ -56,6 +57,7 @@ const CreateDEOForm = () => {
                         }
                     })
                     .catch ((error) => {
+                        console.log(error)
                         setErrMsg(error.message);
                         console.log(error)
                     });
@@ -65,8 +67,6 @@ const CreateDEOForm = () => {
             }
         }
     };
-
-
 
 
     return (
@@ -82,6 +82,18 @@ const CreateDEOForm = () => {
 
                     <h1 className="pb-8 text-center font-semibold">CREATE DEO</h1>
                     <form onSubmit={handleSubmit}>
+                        <label htmlFor="username" className="font-regular">USERNAME</label>
+                        <br />
+                        <input
+                            type="username"
+                            id="username"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                            required
+                            className=" p-2 w-full border-b-2 mb-8 focus:outline-none"
+                        />
+                        <br />
+                        
                         <label htmlFor="email" className="font-regular">EMAIL</label>
                         <br />
                         <input
@@ -92,17 +104,6 @@ const CreateDEOForm = () => {
                             value={email}
                             required
                             className="p-2 w-full border-b-2 mb-8 focus:outline-none"
-                        />
-                        <br />
-                        <label htmlFor="username" className="font-regular">USERNAME</label>
-                        <br />
-                        <input
-                            type="username"
-                            id="username"
-                            onChange={(e) => setName(e.target.value)}
-                            value={name}
-                            required
-                            className=" p-2 w-full border-b-2 mb-8 focus:outline-none"
                         />
                         <br />
 

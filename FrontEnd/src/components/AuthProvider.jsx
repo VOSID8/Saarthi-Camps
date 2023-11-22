@@ -11,7 +11,7 @@ export const AuthContextProvider = (props) => {
 
     useEffect(() => {
         const accessToken = localStorage.getItem("accessToken");
-        if (accessToken) {
+        if (accessToken) { 
             setUserIsLoggedIn(true)
         }
     }, []);

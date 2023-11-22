@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import ManageDEO from './pages/ManageDEO';
 import ForgotPassword from './pages/ForgotPwd';
 
-import AuthContext from './components/AuthProvider';
+import AuthContext from './components/AuthProvider2';
 import React, {useContext} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -30,8 +30,9 @@ function App() {
     </BrowserRouter>
   )
 }
-
+  
 function AppWithSidebar() {
+  const authCtx = useContext(AuthContext)
   return (
     <div className='w-[100vw]'>
       {/*  md:flex */}
@@ -41,8 +42,8 @@ function AppWithSidebar() {
         <Route path='/home' element={<Home />} />
         <Route path='/add-refugee' element={<RefugeeForm />} />
         <Route path='/add-medicine' element={<MedForm />} />
-        <Route path='/view-details' element={<Details />} />
-        <Route path='/manage' element={<ManageDEO />}></Route>
+        {authCtx.isAdmin && <Route path='/view-details' element={<Details />} />}
+        <Route path='/managedeo' element={<ManageDEO />}></Route>
       </Routes>
     </div>
   );

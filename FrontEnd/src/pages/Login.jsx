@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useContext } from "react";
-import AuthContext from "../components/AuthProvider";
+import AuthContext from "../components/AuthProvider2";
 import axios from "axios"
 import api_url from "../config";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -33,7 +33,6 @@ const Login = () => {
         if(email && pwd) {
             setLoading(true);
             try{
-                // console.log(email, pwd);
                 axios
                     .post(url, {
                         email: email.trim(),
@@ -41,8 +40,8 @@ const Login = () => {
                     })
                     .then((response) => {
                         if (!response.data.error) {
-                            console.log(response);
                             authCtx.login(response.data.accessToken);
+                            authCtx.admin(response.data.user.role);
                             navigate("/home", { replace: true });
                             setPwd("");
                             setEmail("");
@@ -59,9 +58,8 @@ const Login = () => {
         }
     };
 
-
+    
     const handleForgotPwd = () => navigate('/forgot-password')
-
 
     return (
         <div className="w-[100vw] h-[100vh] m-0 p-0 flex bg-family bg-cover bg-right md:bg-top">

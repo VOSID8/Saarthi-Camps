@@ -4,7 +4,7 @@ import logout from '../assets/icons/turn-off.png'
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import AuthContext from './AuthProvider';
+import AuthContext from './AuthProvider2';
 import { motion } from 'framer-motion';
 
 function Seperator () {
@@ -31,7 +31,6 @@ function Navbar() {
         authCtx.logout();
     };
 
-
     return (
         <div className="flex md:m-10 md:mx-20 relative z-20" >
             <div className="w-fit h-fit ">
@@ -49,28 +48,45 @@ function Navbar() {
 
                     <Link to="/home" className='md:hidden flex h-full items-center'>
                         <div className="md:hidden pl-2 text-lg">Saarthi</div>
-                    </Link>  
-                    
+                    </Link>
+
                     <Seperator />
                 </div>
 
                 <div className="flex flex-row-reverse">
                     <Link to="/" onClick={handleLogout} className="">
-                        <div className="flex items-center h-[100%] md:px-3">
+                        <div className="flex items-center h-[100%] px-3 hover:bg-yellow">
                             <img src={logout} alt="Logoout" className="h-[30px]"/>
                         </div>   
                     </Link>
-                    <Link to="/add-refugee" className={` py-3 px-6 bg-yellow ${activePage === "/add-refugee" ? "active border-b-2" : ""}`}>
-                        ADD REFUGEE
-                    </Link>
+
+                    {!authCtx.isAdmin && 
+                    <>
                         <Seperator />
-                    <Link to="/add-medicine" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/add-medicine" ? "active  border-b-2" : ""}`}>
-                        ADD MEDICINE
-                    </Link>
+                        <Link to="/add-refugee" className={` py-3 px-6 bg-yellow ${activePage === "/add-refugee" ? "active border-b-2" : ""}`}>
+                            ADD REFUGEE
+                        </Link>
                         <Seperator />
-                    <Link to="/view-details" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
-                        VIEW DETAILS
-                    </Link>
+                        <Link to="/add-medicine" className={` py-3 px-6 hover:bg-yellow ${activePage === "/add-medicine" ? "active  border-b-2" : ""}`}>
+                            ADD MEDICINE
+                        </Link>
+                    </>
+                    }  
+                    
+                    {
+                        authCtx.isAdmin && 
+                    <>  
+                        <Seperator />
+                        <Link to="/managedeo" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
+                            ADD DEO
+                        </Link>
+                        <Seperator />
+                        <Link to="/view-details" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
+                            VIEW DETAILS
+                        </Link>
+                    </>
+                        
+                    }
                 </div>
             </div>
         </div>
