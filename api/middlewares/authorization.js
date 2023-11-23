@@ -16,6 +16,7 @@ const adminOnly = () => {
 
 const dataEntryOperatorOnly = () => {
     return asyncHandler(async (req, res, next) => {
+        console.log("hi")
         if (req.user.role === "dataEntryOperator") next();
         else {
             res.status(403);

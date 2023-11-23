@@ -4,11 +4,14 @@ const asyncHandler = require("express-async-handler");
 const cloudinary = require("../services/cloudinary");
 
 const addRefugee = asyncHandler(async (req, res) => {
+    console.log(req.body)
     const image = req.files?.image;
+    console.log(image)
     if (image) {
         try {
             const result = await cloudinary.v2.uploader.upload(image.tempFilePath)
             req.body.imageURL = result.url;
+            console.log(req.body.imageURL)
         } catch (e) {
             throw new Error(e);
         }

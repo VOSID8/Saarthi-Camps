@@ -22,14 +22,21 @@ function Registration() {
 
     const config = {
       headers: {
-        "Authorization": `Bearer ${token}`
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "multipart/form-data"
       }
     }
 
     if (formData) {
+      const formData2 = new FormData();
+      formData2.append("image", imagePreview); // Assuming you have an imageFile state
+      formData2.append("name", formData.name);
+      formData2.append("gender", formData.gender);
+      formData2.append("dob", formData.dob);
+
       try {
         axios
-          .post(url, formData, config)
+          .post(url, formData2, config)
           .then((response) => {
             if (!response.data.error) {
               console.log(response);
@@ -46,6 +53,38 @@ function Registration() {
       }
     }
   };
+
+//   const handleSubmit = async (event) => {
+//   event.preventDefault();
+
+//   const token = localStorage.getItem("accessToken");
+
+//   const formData = new FormData();
+//   formData.append("image", imagePreview); // Assuming you have an imageFile state
+//   formData.append("name", formData.name);
+//   formData.append("gender", formData.gender);
+//   formData.append("dob", formData.dob);
+
+//   const config = {
+//     headers: {
+//       Authorization: Bearer ${token},
+//       "Content-Type": "multipart/form-data",
+//     },
+//   };
+
+//   try {
+//     const response = await axios.post(url, formData, config);
+
+//     if (!response.data.error) {
+//       console.log(response);
+//       setRefugeeID(response.data.refugeeId);
+//       setIsSubmitted(true);
+//     }
+//   } catch (error) {
+//     console.error("Error submitting form:", error);
+//     alert(An error occurred: ${error.response.data.message});
+//   }
+// };
 
   const handleChange = (event) => {
     const { name, value } = event.target;

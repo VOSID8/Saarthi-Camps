@@ -20,6 +20,7 @@ const forceAuth = () => {
 
         // req.refreshToken = refreshToken;
         req.user = user;
+        console.log("auth")
         next();
     });
 };
@@ -35,6 +36,7 @@ const checkAuth= () => {
             const user = await User.findById(userPayload.id);
             req.user = user;
             // req.refreshToken = refreshToken;
+            console.log("check auth")
             next();
         } catch (error) {
             next();

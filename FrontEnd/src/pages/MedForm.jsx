@@ -125,8 +125,8 @@ export default function MedForm() {
                         <br />
                         <input
                             type="number"
-                            name="quantity"
-                            value={formData.quantity}
+                            name="medicineQuantity"
+                            value={formData.medicineQuantity}
                             onChange={handleChange}
                             required
                             className="w-20 p-2 border-b-2 mb-8 focus:outline-none"
@@ -138,9 +138,9 @@ export default function MedForm() {
                             <label className="">
                                 <input
                                     type="radio"
-                                    name="urgency"
+                                    name="medicineUrgency"
                                     value="0"
-                                    checked={formData.urgency === "0"}
+                                    checked={formData.medicineUrgency === "0"}
                                     onChange={handleChange}
                                     className="mr-2"
                                 />
@@ -149,9 +149,9 @@ export default function MedForm() {
                             <label className="">
                                 <input
                                     type="radio"
-                                    name="urgency"
+                                    name="medicineUrgency"
                                     value="1"
-                                    checked={formData.urgency === "1"}
+                                    checked={formData.medicineUrgency === "1"}
                                     onChange={handleChange}
                                     className="mr-2"
                                 />
@@ -160,9 +160,9 @@ export default function MedForm() {
                             <label className="">
                                 <input
                                     type="radio"
-                                    name="urgency"
+                                    name="medicineUrgency"
                                     value="2"
-                                    checked={formData.urgency === "2"}
+                                    checked={formData.medicineUrgency === "2"}
                                     onChange={handleChange}
                                     className="mr-2"
                                 />

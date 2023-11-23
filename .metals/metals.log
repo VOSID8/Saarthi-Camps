@@ -1471,3 +1471,13 @@ WARNING: Unmatched cancel notification for request id 1484
 2023.11.01 13:43:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
 2023.11.01 13:44:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
 2023.11.01 13:44:08 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.22 13:02:53 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.84.2.
+2023.11.22 13:02:58 WARN  Build server is not auto-connectable.
+2023.11.22 13:07:55 INFO  Shutting down server
+2023.11.22 13:07:55 INFO  shutting down Metals
+2023.11.22 13:07:55 INFO  Exiting server
+2023.11.22 13:09:44 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.84.2.
+2023.11.22 13:09:46 WARN  Build server is not auto-connectable.
+2023.11.22 19:24:29 INFO  Shutting down server
+2023.11.22 19:24:29 INFO  shutting down Metals
+2023.11.22 19:24:29 INFO  Exiting server
