@@ -29,7 +29,9 @@ function Registration() {
 
     if (formData) {
       const formData2 = new FormData();
-      formData2.append("image", imagePreview); // Assuming you have an imageFile state
+      // formData2.append("image", imagePreview); // Assuming you have an imageFile state
+      var imagefile = document.querySelector('#file');
+      formData2.append("image", imagefile.files[0]);
       formData2.append("name", formData.name);
       formData2.append("gender", formData.gender);
       formData2.append("dob", formData.dob);
@@ -54,37 +56,37 @@ function Registration() {
     }
   };
 
-//   const handleSubmit = async (event) => {
-//   event.preventDefault();
+  //   const handleSubmit = async (event) => {
+  //   event.preventDefault();
 
-//   const token = localStorage.getItem("accessToken");
+  //   const token = localStorage.getItem("accessToken");
 
-//   const formData = new FormData();
-//   formData.append("image", imagePreview); // Assuming you have an imageFile state
-//   formData.append("name", formData.name);
-//   formData.append("gender", formData.gender);
-//   formData.append("dob", formData.dob);
+  //   const formData = new FormData();
+  //   formData.append("image", imagePreview); // Assuming you have an imageFile state
+  //   formData.append("name", formData.name);
+  //   formData.append("gender", formData.gender);
+  //   formData.append("dob", formData.dob);
 
-//   const config = {
-//     headers: {
-//       Authorization: Bearer ${token},
-//       "Content-Type": "multipart/form-data",
-//     },
-//   };
+  //   const config = {
+  //     headers: {
+  //       Authorization: Bearer ${token},
+  //       "Content-Type": "multipart/form-data",
+  //     },
+  //   };
 
-//   try {
-//     const response = await axios.post(url, formData, config);
+  //   try {
+  //     const response = await axios.post(url, formData, config);
 
-//     if (!response.data.error) {
-//       console.log(response);
-//       setRefugeeID(response.data.refugeeId);
-//       setIsSubmitted(true);
-//     }
-//   } catch (error) {
-//     console.error("Error submitting form:", error);
-//     alert(An error occurred: ${error.response.data.message});
-//   }
-// };
+  //     if (!response.data.error) {
+  //       console.log(response);
+  //       setRefugeeID(response.data.refugeeId);
+  //       setIsSubmitted(true);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     alert(An error occurred: ${error.response.data.message});
+  //   }
+  // };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -96,8 +98,8 @@ function Registration() {
         ...formData,
         dob: formattedDate
       });
-    } 
-    else if(name === "image") {
+    }
+    else if (name === "image") {
       handleFileChange(event);
     }
     else {
@@ -121,20 +123,20 @@ function Registration() {
       reader.onloadend = () => {
         setFormData({
           ...formData,
-          image: reader.result, 
+          image: reader.result,
         });
-        setImagePreview(reader.result); 
+        setImagePreview(reader.result);
       };
       reader.readAsDataURL(file);
     } else {
       setFormData({
         ...formData,
-        image: null,  
+        image: null,
       });
       setImagePreview(null);
     }
   };
-  
+
   const handleRemoveImage = () => {
     setFormData({
       ...formData,
@@ -159,7 +161,7 @@ function Registration() {
               <div className="absolute flex justify-center items-center w-[100%] h-full">
                 <div className="">Add a Cover Photo</div>
               </div>
-            )} 
+            )}
             <input
               type="file"
               accept="image/*"
