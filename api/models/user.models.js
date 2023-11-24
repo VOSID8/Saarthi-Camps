@@ -32,9 +32,13 @@ const userSchema = mongoose.Schema({
             message: `Password should not contain "password"`
         }
     },
+    specialization: {
+        type: String,
+        default: ""
+    },
     role: {
         type: String,
-        enum: ["dataEntryOperator", "admin"],
+        enum: ["dataEntryOperator", "admin", "doctor"],
         default: "dataEntryOperator"
     },
     refreshTokens: [

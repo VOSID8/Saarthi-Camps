@@ -25,4 +25,16 @@ const sendPasswordResetEmail = (email, id, token) => {
     transporter.sendMail(mailOptions);
 }
 
-module.exports = { sendTemporaryPassword, sendPasswordResetEmail };
+const sendVideoCallEmail = (email, channel, token1, token2) => {
+    const mailOptions = {
+        from: process.env.USER_EMAIL,
+        to: email,
+        subject: "Saarthi-Camps: Video call link",
+        html: `
+            <p>Click on the link to attend video call.</p>.
+            <a href="http://localhost:3001/${channel}/${token1}/${token2}">Click here</a>`
+    }
+    transporter.sendMail(mailOptions);
+}
+
+module.exports = { sendTemporaryPassword, sendPasswordResetEmail, sendVideoCallEmail };

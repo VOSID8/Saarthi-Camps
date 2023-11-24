@@ -4,7 +4,7 @@ const secret = process.env.ACCESS_TOKEN_SECRET;
 
 const generateAccessToken = (id, email, password, role) => {
     const payload = { id, email, password, role };
-    return jwt.sign(payload, secret, { expiresIn: '1h' });
+    return jwt.sign(payload, secret, { expiresIn: '30d' });
 }
 
 const validateAccessToken = (accessToken) => {

@@ -30,7 +30,7 @@ function App() {
     </BrowserRouter>
   )
 }
-  
+
 function AppWithSidebar() {
   const authCtx = useContext(AuthContext)
   return (

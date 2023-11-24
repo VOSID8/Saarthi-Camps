@@ -6,36 +6,55 @@ const { sendTemporaryPassword, sendPasswordResetEmail } = require("../services/e
 const { generateAccessToken } = require("../security/accessTokenUtils");
 const { generateRefreshToken } = require("../security/refreshTokenUtils");
 
-const createDeoCredentials = asyncHandler(async (req, res) => {
-    console.log("gyu");
-    // create random password of 6 characters
+const randomPasswordGen = () => {
     const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     const password_length = 6;
     let password = '';
+
     for (var i = 0; i < password_length; i++) {
         var rnum = Math.floor(Math.random() * chars.length);
         password += chars.substring(rnum, rnum + 1);
     }
-    console.log("gyu");
+
+    return password;
+}
+
+const createDeoCredentials = asyncHandler(async (req, res) => {
+    // create random password of 6 characters
+    const password = randomPasswordGen();
     req.body.password = password;
     req.body.role = "dataEntryOperator";
-    console.log("gyu");
     let user = null;
-    console.log("gyu");
-    try{
-        console.log("gyu");
+    try {
         user = await User.create(req.body);
-        console.log("HAey");
         //send email to deo with temporary password
         sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
-        console.log("HAey");
-   
-    } catch(e){
+
+    } catch (e) {
         res.status(400);
         throw new Error("Duplicate email address");
     }
     res.json(user);
 });
+
+const createDoctorCredentials = asyncHandler(async (req, res) => {
+    // create random password of 6 characters
+    const password = randomPasswordGen();
+    req.body.password = password;
+    req.body.role = "doctor";
+
+    let user = null;
+    try {
+        user = await User.create(req.body);
+        //send email to deo with temporary password
+        sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
+
+    } catch (e) {
+        res.status(400);
+        throw new Error("Duplicate email address");
+    }
+    res.json(user);
+})
 
 const handleLogin = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
@@ -47,18 +66,18 @@ const handleLogin = asyncHandler(async (req, res) => {
 
     if (user && await user.isPasswordMatch(password)) {
         const accessToken = generateAccessToken(user._id, user.email, user.password, user.role);
-        const refreshToken = generateRefreshToken(user._id, user.email, user.password, user.role);
+        //const refreshToken = generateRefreshToken(user._id, user.email, user.password, user.role);
 
-        user.refreshTokens.push({ refreshToken });
+        //user.refreshTokens.push({ refreshToken });
         await user.save();
 
-        res.cookie("refreshToken", refreshToken, {
-            httpOnly: true,
-            domain: 'localhost:5173',
-            secure: true,
-            maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
-        });
-        res.json({user, accessToken});
+        // res.cookie("refreshToken", refreshToken, {
+        //     httpOnly: true,
+        //     domain: 'localhost:5173',
+        //     secure: true,
+        //     maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+        // });
+        res.json({ user, accessToken });
     }
     else {
         res.status(400);
@@ -88,8 +107,8 @@ const handleUpdate = asyncHandler(async (req, res) => {
     updateFields.forEach((update) => {
         req.user[update] = req.body[update];
     });
-    
-    if(req.user.isModified("role")){
+
+    if (req.user.isModified("role")) {
         req.user.role = "dataEntryOperator"
     }
     await req.user.save();
@@ -145,5 +164,6 @@ module.exports = {
     handleUpdate,
     forgotPassword,
     resetPassword,
-    getUserProfile
+    getUserProfile,
+    createDoctorCredentials
 }
