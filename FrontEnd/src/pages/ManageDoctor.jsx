@@ -1,4 +1,4 @@
-export default function ManageDEO () {
+export default function ManageDoctor () {
     return(
         <div className="md:w-[100vw] absolute top-0 h-[100vh]">
             <CreateDEOForm />
@@ -12,7 +12,7 @@ import axios from "axios"
 import api_url from "../config";
 import { useNavigate } from "react-router-dom";
 
-const url = api_url + "user/create-deo";
+const url = api_url + "user/create-doctor";
 
 const CreateDEOForm = () => {
     const navigate = useNavigate();
@@ -20,6 +20,7 @@ const CreateDEOForm = () => {
     const errRef = useRef();
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+    const [spc, setSpc] = useState("");
     const [errMsg, setErrMsg] = useState("");
     const [success, setSuccess] = useState(false);
 
@@ -48,10 +49,11 @@ const CreateDEOForm = () => {
                     .post(url, {
                         email: email.trim(),
                         name: name.trim(),
+                        specialization: spc,
                     }, config)
                     .then((response) => {
                         if (!response.data.error) {
-                            console.log(response);
+                            // console.log(response);
                             setName("");
                             setEmail("");
                         }
@@ -59,7 +61,6 @@ const CreateDEOForm = () => {
                     .catch ((error) => {
                         console.log(error)
                         setErrMsg(error.message);
-                        console.log(error)
                     });
             }
             catch (error) {
@@ -73,14 +74,14 @@ const CreateDEOForm = () => {
         <div className="w-[100vw] h-[100vh] m-0 p-0 flex bg-family bg-cover bg-right md:bg-top">
             {success ? (
                 <section className="text-left p-10 outline w-[350px] m-auto">
-                    <h1>DEO Created Successfully!</h1>
+                    <h1>Doctor Added Successfully!</h1>
                     <br />
-                    <p><Link to="/manage-deo">Add another DEO</Link></p>
+                    <p><Link to="/manage-d  octor">Add another Doctor</Link></p>
                 </section>
             ) : (
                 <section className="text-left p-10 w-[350px] m-auto md:mr-[10vw] bg-white ">
 
-                    <h1 className="pb-8 text-center font-semibold">CREATE DEO</h1>
+                    <h1 className="pb-8 text-center font-semibold">ADD DOCTOR</h1>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username" className="font-regular">USERNAME</label>
                         <br />
@@ -107,6 +108,27 @@ const CreateDEOForm = () => {
                         />
                         <br />
 
+                        <label htmlFor="userType" className="font-regular">SPECIALIZATION</label>
+                        <br />
+                        <select
+                            id="specialization"
+                            onChange={(e) => setSpc(e.target.value)}
+                            className="p-2 w-full border-b-2 mb-8 focus:outline-none"
+                        >
+                            <option value="General Practitioner">General Practitioner</option>
+                            <option value="Pediatrician">Pediatrician</option>
+                            <option value="Obstetrician/Gynecologist">Obstetrician/Gynecologist</option>
+                            <option value="Internal Medicine Physician">Internal Medicine Physician</option>
+                            <option value="Infectious Disease Specialist">Infectious Disease Specialist</option>
+                            <option value="Psychiatrist">Psychiatrist</option>
+                            <option value="Dermatologist">Dermatologist</option>
+                            <option value="Ophthalmologist">Ophthalmologist</option>
+                            <option value="Dentist">Dentist</option>
+                            <option value="other">Other</option>
+    
+                        </select>
+                        <br />
+
                         <p
                             ref={errRef}
                             className={errMsg ? "errmsg" : "offscreen"}
@@ -115,7 +137,7 @@ const CreateDEOForm = () => {
                             {errMsg}
                         </p>
 
-                        <button className="p-2 px-10 w-full bg-yellow font-semibold hover:outline transition-colors duration-150 rounded-none">CREATE DEO</button>
+                        <button className="p-2 px-10 w-full bg-yellow font-semibold hover:outline transition-colors duration-150 rounded-none">ADD DOCTOR</button>
                     </form>
                 </section>
             )}

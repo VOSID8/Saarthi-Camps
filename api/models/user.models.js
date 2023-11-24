@@ -34,7 +34,6 @@ const userSchema = mongoose.Schema({
     },
     specialization: {
         type: String,
-        default: ""
     },
     role: {
         type: String,

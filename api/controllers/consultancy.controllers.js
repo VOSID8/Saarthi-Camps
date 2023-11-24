@@ -6,7 +6,9 @@ const { sendVideoCallEmail } = require("../services/emailUtils");
 const { RtcTokenBuilder, RtcRole } = require('agora-access-token');
 
 const postConsultancy = asyncHandler(async (req, res) => {
+    console.log("Hi")
     const { service, refugeeId } = req.body;
+    //console.log(req.body)
     if (!service || !refugeeId) {
         res.status(400);
         throw new Error("Please fill all required fields");
@@ -24,9 +26,11 @@ const postConsultancy = asyncHandler(async (req, res) => {
     }
 
     const consultancy = await Consultancy.create(req.body);
-    //console.log(consultancy.service)
+    console.log(consultancy)
+    console.log(consultancy.service)
     const doctor = await User.findOne({ specialization: consultancy.service })
     //console.log(doctor)
+    console.log(doctor)
     //generate video call token
 
     // Define your Agora App ID and App Certificate (you can get these from the Agora Dashboard)

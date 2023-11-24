@@ -9,8 +9,10 @@ import ManageDEO from './pages/ManageDEO';
 import ForgotPassword from './pages/ForgotPwd';
 
 import AuthContext from './components/AuthProvider2';
-import React, {useContext} from 'react';
+import React, {useContext, useState, useCallback} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ManageDoctor from './pages/ManageDoctor';
+import Consultancy from './pages/Consultancy';
 
 function App() {
   const authCtx = useContext(AuthContext)
@@ -23,8 +25,6 @@ function App() {
           {!authCtx.isLoggedIn && <Route index path='forgot-password' element={<ForgotPassword />} />}
           {!authCtx.isLoggedIn && <Route index path='*' element={<Login />} />}
           {authCtx.isLoggedIn && <Route path='/*' element={<AppWithSidebar />} />}
-          {/* <Route index path='/' element={<Login />} /> */}
-          {/* <Route path='/*' element={<AppWithSidebar />} /> */}
         </Routes>
       </div>
     </BrowserRouter>
@@ -32,7 +32,13 @@ function App() {
 }
 
 function AppWithSidebar() {
-  const authCtx = useContext(AuthContext)
+  const authCtx = useContext(AuthContext);
+  const [channel, setChannel] = useState("");
+
+  const selectChannel = useCallback((newChannel) => {
+    setChannel(newChannel);
+  }, []);
+
   return (
     <div className='w-[100vw]'>
       {/*  md:flex */}
@@ -43,10 +49,14 @@ function AppWithSidebar() {
         <Route path='/add-refugee' element={<RefugeeForm />} />
         <Route path='/add-medicine' element={<MedForm />} />
         <Route path='/view-details' element={<Details />} />
-        <Route path='/managedeo' element={<ManageDEO />}></Route>
+        <Route path='/manage-deo' element={<ManageDEO />} />
+        <Route path='/manage-doctor' element={<ManageDoctor/>} />
+        <Route path='/consult' element={<Consultancy/>} />
+        {/* <Route path='/vc-form' element={<ChannelForm selectChannel={selectChannel}/>} /> */}
+        {/* <Route path='/call' element={<Call channel={channel}/>} /> */}
       </Routes>
     </div>
   );
 }
 
-export default App
+export default App;

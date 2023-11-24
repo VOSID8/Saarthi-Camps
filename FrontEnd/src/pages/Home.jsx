@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 function Pop() {
     return (
-        <div className="bg-white absolute -top-10 md:-top-32 md:flex w-[90vw] ml-[5vw] md:w-[80vw] md:ml-[10vw] p-4 md:p-10 justify-between overflow-x-hidden"
+        <motion.div className="bg-white absolute -top-10 md:-top-32 md:flex w-[90vw] ml-[5vw] md:w-[80vw] md:ml-[10vw] p-4 md:p-10 justify-between overflow-x-hidden"
             initial={{ y:200 }}
             whileInView={{ y:0 }}
             transition={{ ease: "easeOut", duration: 0.25 }}
@@ -25,7 +25,7 @@ function Pop() {
                     <div className=" py-3      md:py-3 md:px-6 bg-yellow font-bold hover:outline hover:scale-105 transition-transform">Add Medicine</div>
                 </Link>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
@@ -48,7 +48,7 @@ const InstructionArr = [
 ]
 
 const renderList = InstructionArr.map((item, index) => (
-    <div key={index} className={`flex md:block md:w-[25vw] mb-10 justify-evenly ${index%2 === 1 ? "flex-row-reverse" : ""}`}
+    <motion.div key={index} className={`flex md:block md:w-[25vw] mb-10 justify-evenly ${index%2 === 1 ? "flex-row-reverse" : ""}`}
         initial={{ y:100 }}
         whileInView={{ y:0 }}
         transition={{ ease: "easeOut", duration: 0.25, delay: index*0.1 }}>
@@ -66,7 +66,7 @@ const renderList = InstructionArr.map((item, index) => (
                 {item.detail}
             </div>
         </div>
-    </div>
+    </motion.div>
 ));
 
 function Instructions() {
@@ -86,22 +86,22 @@ function Instructions() {
 function WhyUS() {
     return (
         <div className="text-left mx-5 md:mb-10 pb-10 md:mx-[10vw]">
-            <div className="flex mb-8"
+            <motion.div className="flex mb-8"
                 initial={{ y:100 }}
                 whileInView={{ y:0 }}
                 transition={{ ease: "easeOut", duration: 0.25 }}
             >
                 <div className="w-[5px] bg-yellow mr-2"></div>
                 <div className="text-2xl md:text-4xl font-bold">Why Saarthi</div>
-            </div>
+            </motion.div>
 
-            <div className="md:flex"
+            <motion.div className="md:flex"
                 initial={{ y:100 }}
                 whileInView={{ y:0 }}
                 transition={{ ease: "easeOut", duration: 0.25 }}
             >
                 <img src={logo} alt="Logo" className="md:h-[200px] bg-yellow" />
-                <div className="p-4 text-lg bg-grey relative bottom-28 md:bottom-0 md:right-10 md:top-10 md:flex justify-between m-auto md:m-0 w-[90%] md:w-full"
+                <motion.div className="p-4 text-lg bg-grey relative bottom-28 md:bottom-0 md:right-10 md:top-10 md:flex justify-between m-auto md:m-0 w-[90%] md:w-full"
                     initial={{ y:100 }}
                     whileInView={{ y:0 }}
                     transition={{ ease: "easeOut", duration: 0.25 }}
@@ -117,8 +117,8 @@ function WhyUS() {
 
                         </div>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     )
 }

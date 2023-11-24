@@ -4,6 +4,9 @@ import axios from "axios"
 import api_url from "../config";
 import { Navigate, useNavigate } from "react-router-dom";
 
+import hidePassword from '../assets/icons/hidePassword.png';
+import viewPassword from '../assets/icons/viewPassword.png';
+
 const url = api_url + "user/login/";
 
 const Login = () => {
@@ -14,6 +17,7 @@ const Login = () => {
     const [pwd, setPwd] = useState("");
     const [errMsg, setErrMsg] = useState("");
     const [success, setSuccess] = useState(false);
+    const [passType, setPassType] = useState("password")
 
     const authCtx = useContext(AuthContext);
 
@@ -30,9 +34,9 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(email && pwd) {
+        if (email && pwd) {
             setLoading(true);
-            try{
+            try {
                 axios
                     .post(url, {
                         email: email.trim(),
@@ -48,7 +52,7 @@ const Login = () => {
                             setLoading(false);
                         }
                     })
-                    .catch ((error) => {
+                    .catch((error) => {
                         setErrMsg("Wrong Credentials")
                     });
             }
@@ -58,8 +62,16 @@ const Login = () => {
         }
     };
 
-    
+
     const handleForgotPwd = () => navigate('/forgot-password')
+    const handlePassType = () => {
+        if (passType === "password") {
+            setPassType("text");
+        } else {
+            setPassType("password");
+        }
+    };
+
 
     return (
         <div className="w-[100vw] h-[100vh] m-0 p-0 flex bg-family bg-cover bg-right md:bg-top">
@@ -88,14 +100,22 @@ const Login = () => {
                         <br />
                         <label htmlFor="password" className="font-regular">PASSWORD</label>
                         <br />
-                        <input
-                            type="password"
-                            id="password"
-                            onChange={(e) => setPwd(e.target.value)}
-                            value={pwd}
-                            required
-                            className=" p-2 w-full border-b-2 mb-8 focus:outline-none"
-                        />
+                        <div className="flex">
+                            
+                            <input
+                                type={passType}
+                                id="password"
+                                onChange={(e) => setPwd(e.target.value)}
+                                value={pwd}
+                                required
+                                className=" p-2 w-full border-b-2 mb-8 focus:outline-none"
+                            />
+                            <div className="opacity-[80%]" onClick={handlePassType}>
+                                <img src={passType === "password" ? hidePassword : viewPassword} className="h-[35px]" />
+                            </div>
+                        </div>
+
+
                         <br />
 
                         <p
