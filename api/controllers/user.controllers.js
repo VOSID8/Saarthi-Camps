@@ -45,6 +45,7 @@ const createDoctorCredentials = asyncHandler(async (req, res) => {
 
     let user = null;
     try {
+        //console.log(req.body)
         user = await User.create(req.body);
         //send email to deo with temporary password
         sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
@@ -53,6 +54,7 @@ const createDoctorCredentials = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("Duplicate email address");
     }
+    console.log(user);
     res.json(user);
 })
 

@@ -71,6 +71,10 @@ function Navbar() {
                             ADD MEDICINE
                         </Link>
                         <Seperator />
+                        <Link to="/consult" className={` py-3 px-6 hover:bg-yellow ${activePage === "/consult" ? "active  border-b-2" : ""}`}>
+                            LIVE CONSULTANCY
+                        </Link>
+                        <Seperator />
                         <Link to="/view-details" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
                             VIEW DETAILS
                         </Link>
@@ -81,12 +85,14 @@ function Navbar() {
                         authCtx.isAdmin && 
                     <>  
                         <Seperator />
-                        <Link to="/managedeo" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
+                        <Link to="/manage-deo" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
                             ADD DEO
                         </Link>
-                        
+                        <Seperator />
+                        <Link to="/manage-doctor" className={`hidden md:block py-3 px-6 hover:bg-yellow ${activePage === "/view-details" ? "active  border-b-2" : ""}`}>
+                            ADD DOCTOR
+                        </Link>
                     </>
-                        
                     }
                 </div>
             </div>

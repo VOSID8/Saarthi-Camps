@@ -17,7 +17,7 @@ function Registration() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log(formData);
     const token = localStorage.getItem("accessToken")
 
     const config = {
@@ -148,7 +148,7 @@ function Registration() {
   const renderForm = (
     <div className="">
       <form onSubmit={handleSubmit} className="justify-items-start">
-        <div className="w-[100px] h-[100px] rounded-full overflow-hidden">
+        <div className="w-[100px] h-[100px] rounded-full outline overflow-hidden m-auto">
           <label className="w-[100%] h-[100%] relative">
             {imagePreview ? (
               <>
@@ -158,7 +158,7 @@ function Registration() {
                 </button>
               </>
             ) : (
-              <div className="absolute flex justify-center items-center w-[100%] h-full">
+              <div className="absolute flex justify-center items-center w-[100%] h-full text-center">
                 <div className="">Add a Cover Photo</div>
               </div>
             )}
@@ -249,7 +249,9 @@ function Registration() {
 
       <div className="flex mt-6">
         <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none mr-2" onClick={handleMeds}>Add Medicine</button>
+        <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none" onClick={() => window.location.reload()}>Consult a Specialist</button>
         <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none" onClick={() => window.location.reload()}>New Form</button>
+        
       </div>
     </div>
   )

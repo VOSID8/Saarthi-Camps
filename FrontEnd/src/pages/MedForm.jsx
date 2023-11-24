@@ -11,8 +11,8 @@ export default function MedForm() {
     const [formData, setFormData] = useState({
         refugeeId: "",
         medicineName: "",
-        // urgency: "0",
-        // quantity: ""
+        urgency: "0",
+        quantity: ""
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -56,11 +56,6 @@ export default function MedForm() {
         });
     };
 
-    const medicineOptions = [
-        "Medicine 1",
-        "Medicine 2",
-        "Medicine 3",
-    ];
 
     const renderForm = (
         <div className="">
