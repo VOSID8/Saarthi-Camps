@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Main page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
+</head>
+
+<body>
+
+    <button id="join-btn">Join Stream</button>
+
+    <div id="stream-wrapper">
+        <div id="video-streams"></div>
+
+        <div id="stream-controls">
+            <button id="leave-btn">Leave Stream</button>
+            <button id="mic-btn">Mic On</button>
+            <button id="camera-btn">Camera on</button>
+        </div>
+    </div>
+
+</body>
+<script src="/js/agora.js"></script>
+<script>
+
+    const url = window.location.href;
+    const urlArray = url.split('/');
+
+    const APP_ID = "28d16bd65fe041f7b3913ec336394874"
+    //const TOKEN = urlArray[1] + "/" + urlArray[2] + "/" + urlArray[3]
+    //console.log(TOKEN);
+    // const TOKEN = "00628d16bd65fe041f7b3913ec336394874IAAt/o0wz1ivfm9D1PTAb0+z4vzKFDN6zmkNLEGZWRop3ZX5MOBh03IJEACy0G"
+    // console.log(TOKEN)
+    // const TOKEN = "007eJxTYAha2/Sn48cD8Q27ix5fjzx+uE/au1JeRXNR5QHHF4tbvzcoMBhZpBiaJaWYmaalGpgYppknGVsaGqcmGxubGVuaWJibnLkSn9oQyMhwvaKNiZEBAkF8FgZHXxNTBgYAFFghRQ=="
+    const TOKEN = "007eJxTYDhkJmd40m51imHReYkcJ6e7DG9VF4Qwvkq+3+k+ee8/bxUFBiOLFEOzpBQz07RUAxPDNPMkY0tD49RkY2MzY0sTC3OT5H/xqQ2BjAw8s3kZGRkgEMRnYXD0NTFjYAAAvQUcbw=="
+    const CHANNEL = "AM46"
+    //const CHANNEL = urlArray[0]
+    // const CHANNEL = "AM45"
+
+    console.log(TOKEN, CHANNEL)
+
+    const client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' })
+
+    let localTracks = []
+    let remoteUsers = {}
+
+    let joinAndDisplayLocalStream = async () => {
+
+        client.on('user-published', handleUserJoined)
+
+        client.on('user-left', handleUserLeft)
+
+        let UID = await client.join(APP_ID, CHANNEL, TOKEN, null)
+
+        localTracks = await AgoraRTC.createMicrophoneAndCameraTracks()
+
+        let player = `<div class="video-container" id="user-container-${UID}">
+                        <div class="video-player" id="user-${UID}"></div>
+                  </div>`
+        document.getElementById('video-streams').insertAdjacentHTML('beforeend', player)
+
+        localTracks[1].play(`user-${UID}`)
+
+        await client.publish([localTracks[0], localTracks[1]])
+    }
+
+    let joinStream = async () => {
+        await joinAndDisplayLocalStream()
+        document.getElementById('join-btn').style.display = 'none'
+        document.getElementById('stream-controls').style.display = 'flex'
+    }
+
+    let handleUserJoined = async (user, mediaType) => {
+        remoteUsers[user.uid] = user
+        await client.subscribe(user, mediaType)
+
+        if (mediaType === 'video') {
+            let player = document.getElementById(`user-container-${user.uid}`)
+            if (player != null) {
+                player.remove()
+            }
+
+            player = `<div class="video-container" id="user-container-${user.uid}">
+                        <div class="video-player" id="user-${user.uid}"></div> 
+                 </div>`
+            document.getElementById('video-streams').insertAdjacentHTML('beforeend', player)
+
+            user.videoTrack.play(`user-${user.uid}`)
+        }
+
+        if (mediaType === 'audio') {
+            user.audioTrack.play()
+        }
+    }
+
+    let handleUserLeft = async (user) => {
+        delete remoteUsers[user.uid]
+        document.getElementById(`user-container-${user.uid}`).remove()
+    }
+
+    let leaveAndRemoveLocalStream = async () => {
+        for (let i = 0; localTracks.length > i; i++) {
+            localTracks[i].stop()
+            localTracks[i].close()
+        }
+
+        await client.leave()
+        document.getElementById('join-btn').style.display = 'block'
+        document.getElementById('stream-controls').style.display = 'none'
+        document.getElementById('video-streams').innerHTML = ''
+    }
+
+    let toggleMic = async (e) => {
+        if (localTracks[0].muted) {
+            await localTracks[0].setMuted(false)
+            e.target.innerText = 'Mic on'
+            e.target.style.backgroundColor = 'cadetblue'
+        } else {
+            await localTracks[0].setMuted(true)
+            e.target.innerText = 'Mic off'
+            e.target.style.backgroundColor = '#EE4B2B'
+        }
+    }
+
+    let toggleCamera = async (e) => {
+        if (localTracks[1].muted) {
+            await localTracks[1].setMuted(false)
+            e.target.innerText = 'Camera on'
+            e.target.style.backgroundColor = 'cadetblue'
+        } else {
+            await localTracks[1].setMuted(true)
+            e.target.innerText = 'Camera off'
+            e.target.style.backgroundColor = '#EE4B2B'
+        }
+    }
+
+    document.getElementById('join-btn').addEventListener('click', joinStream)
+    document.getElementById('leave-btn').addEventListener('click', leaveAndRemoveLocalStream)
+    document.getElementById('mic-btn').addEventListener('click', toggleMic)
+    document.getElementById('camera-btn').addEventListener('click', toggleCamera)
+</script>
+
+</html>
