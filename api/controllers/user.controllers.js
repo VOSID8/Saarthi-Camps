@@ -1,10 +1,20 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/user.models");
 const jwt = require("jsonwebtoken");
+const { Queue } = require("bullmq");
 
 const { sendTemporaryPassword, sendPasswordResetEmail } = require("../services/emailUtils");
 const { generateAccessToken } = require("../security/accessTokenUtils");
 const { generateRefreshToken } = require("../security/refreshTokenUtils");
+
+const emailQueue = new Queue("email-queue", {
+    connection: {
+        host: process.env.QUEUE_HOST,
+        port: process.env.QUEUE_PORT,
+        username: "default",
+        password: process.env.PASSWORD
+    }
+});
 
 const randomPasswordGen = () => {
     const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -23,12 +33,21 @@ const createDeoCredentials = asyncHandler(async (req, res) => {
     // create random password of 6 characters
     const password = randomPasswordGen();
     req.body.password = password;
+    //console.log(password);
     req.body.role = "dataEntryOperator";
     let user = null;
     try {
         user = await User.create(req.body);
+        //console.log(user);
         //send email to deo with temporary password
-        sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
+        //sendTemporaryPassword(req.body.name, req.body.email, req.body.password);
+        await emailQueue.add(`${Date.now()}`, {
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        })
+
+        //console.log("Hi9")
 
     } catch (e) {
         res.status(400);
