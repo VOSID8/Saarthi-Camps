@@ -88,15 +88,12 @@ const CreateDEOForm = () => {
   return (
     <div className="w-[100vw] h-[100vh] m-0 p-0 flex bg-family bg-cover bg-right md:bg-top">
       {success ? (
-        <section className="text-left p-10 outline w-[350px] m-auto  bg-white">
-          <h1>DEO Created Successfully!</h1>
+        <section className="text-center h-[80px] m-15 outline w-[350px] m-auto  bg-white">
+          <h2 className="font-bold">DEO Created Successfully!</h2>
           <br />
-          {/* <p>
-            <Link to="/manage-deo">Add another DEO</Link>
-          </p> */}
         </section>
       ) : (
-        <section className="text-left p-10 w-[350px] m-auto md:mr-[10vw] bg-white ">
+        <section className="text-left p-10  w-[350px] m-auto md:mr-[10vw] bg-white ">
           <h2 className="pb-5 text-center font-bold">CREATE DEO</h2>
           <form onSubmit={handleSubmit}>
             <label htmlFor="username" className="font-regular">

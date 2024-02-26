@@ -30,7 +30,6 @@ public class Saarthi {
 	}
 	@AfterSuite(alwaysRun = true)
 	public void dispose() {
-//		softAssert.assertAll();
 		System.out.println("Test Done");
 		driver.close();
 	}
