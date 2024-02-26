@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="AuthLogin">
+    <classes>
+      <class name="com.Saarthi.Saarthi">
+		  <methods>
+			  <include name="AdminTestLogin1"/>
+			  <include name="AdminTestLogin2"/>
+			   <include name="AdminLogin"/>
+		  </methods>
+	  </class>
+    </classes>
+  </test>  
+  
+  <test thread-count="5" name="AddDeo">
+    <classes>
+      <class name="com.Saarthi.Saarthi">
+		  <methods>
+			   <include name="AdminLogin"/>
+			   <include name="MoveToDeo"/>
+			   <include name="AddDeo"/>
+			   <include name="MoveToHome"/>
+			   <include name="LogOut"/>
+			   <include name="DeoTestLogin"/>
+		  </methods>
+	  </class>
+    </classes>
+  </test><!-- Test -->
+</suite> <!-- Suite -->
