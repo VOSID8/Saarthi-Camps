@@ -125,6 +125,7 @@ function Navbar() {
               </Link>
               <Seperator />
               <Link
+                id="add-doctor"
                 to="/manage-doctor"
                 className={`hidden md:block py-3 px-6 hover:bg-yellow ${
                   activePage === '/view-details' ? 'active  border-b-2' : ''

@@ -97,8 +97,8 @@ const createDeoCredentials = asyncHandler(async (req, res) => {
 
 const createDoctorCredentials = asyncHandler(async (req, res) => {
   // create random password of 6 characters
-  const password = randomPasswordGen()
-  req.body.password = password
+  // const password = randomPasswordGen()
+  req.body.password = 'Ayush@1234'
   req.body.role = 'doctor'
 
   let user = null
@@ -106,9 +106,10 @@ const createDoctorCredentials = asyncHandler(async (req, res) => {
     //console.log(req.body)
     user = await User.create(req.body)
     //send email to deo with temporary password
-
-    sendTemporaryPassword(req.body.name, req.body.email, req.body.password)
+    // sendTemporaryPassword(req.body.name, req.body.email, req.body.password)
+    console.log('dhd')
   } catch (e) {
+    console.log(e)
     res.status(400)
     throw new Error('Duplicate email address')
   }
