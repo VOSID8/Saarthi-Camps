@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import json from './result.json';
+import React, { useState } from 'react'
+import json from './result.json'
 
 function AutoCompleteApp() {
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState([])
 
   const search = (event) => {
-    let input = event.target.value;
-    let matches = [];
-    
+    let input = event.target.value
+    let matches = []
+
     if (input.length > 1) {
       for (let i = 0; i < json.length; i++) {
         if (json[i].match(input)) {
-          matches.push(json[i]);
+          matches.push(json[i])
         }
       }
     }
-    
-    setSuggestions(matches);
-  };
+
+    setSuggestions(matches)
+  }
 
   return (
     <div>
@@ -25,15 +25,13 @@ function AutoCompleteApp() {
       <input onKeyUp={search} />
       <React.Fragment>
         <ul style={{ listStyleType: 'none' }}>
-          {suggestions.map(res => (
-            <li key={res}>
-              {res}
-            </li>
+          {suggestions.map((res) => (
+            <li key={res}>{res}</li>
           ))}
         </ul>
       </React.Fragment>
     </div>
-  );
+  )
 }
 
-export default AutoCompleteApp;
+export default AutoCompleteApp

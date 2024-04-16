@@ -7,25 +7,26 @@ export default function ManageDEO() {
 }
 
 import { useRef, useState, useEffect } from 'react'
-// import AuthContext from '../components/AuthProvider2'
+
 import axios from 'axios'
 import api_url from '../config'
-// import { useNavigate } from 'react-router-dom'
-
+import CircularProgress from '@mui/material/CircularProgress'
+import { Snackbar } from '@mui/joy'
 import hidePassword from '../assets/icons/hidePassword.png'
 import viewPassword from '../assets/icons/viewPassword.png'
 const url = api_url + 'user/create-deo'
 
 const CreateDEOForm = () => {
-  // const navigate = useNavigate()
   const userRef = useRef()
   const errRef = useRef()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
   const [errMsg, setErrMsg] = useState('')
+  const [open, setOpen] = useState(false)
   const [success, setSuccess] = useState(false)
   const [passType, setPassType] = useState('password')
+  const [processing, setProcessing] = useState(false)
 
   useEffect(() => {
     userRef.current.focus()
@@ -54,7 +55,10 @@ const CreateDEOForm = () => {
     }
 
     if (email && name && password) {
+      setOpen(false)
+      setProcessing(true)
       try {
+        setProcessing(true)
         axios
           .post(
             url,
@@ -71,17 +75,23 @@ const CreateDEOForm = () => {
               setName('')
               setEmail('')
               setPassword('')
+              setOpen(false)
+              setProcessing(false)
               setSuccess(true)
             }
           })
           .catch((error) => {
             console.log(error)
             setErrMsg(error.response.data.message)
+            setOpen(true)
             console.log(error)
           })
       } catch (error) {
+        setErrMsg(error)
+        setOpen(true)
         alert(error)
       }
+      setProcessing(false)
     }
   }
 
@@ -148,24 +158,31 @@ const CreateDEOForm = () => {
             </div>
             <br />
 
-            <p
-              id="errRef"
-              ref={errRef}
-              className={errMsg ? 'errmsg' : 'offscreen'}
-              aria-live="assertive"
-            >
-              {errMsg}
-            </p>
-
             <button
               id="add-deo"
               className="p-2 px-10 bg-yellow font-semibold hover:outline transition-colors duration-150 rounded-none"
             >
-              CREATE DEO
+              {processing ? (
+                <CircularProgress color="inherit" size="25px" />
+              ) : (
+                'CREATE DEO'
+              )}
             </button>
           </form>
         </section>
       )}
+      <Snackbar
+        autoHideDuration={2000}
+        color="danger"
+        variant="solid"
+        onClose={() => {
+          setOpen(false)
+          return
+        }}
+        open={open}
+      >
+        {errMsg}
+      </Snackbar>
     </div>
   )
 }

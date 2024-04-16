@@ -11,7 +11,7 @@ import AuthContext from '../components/AuthProvider2'
 import axios from 'axios'
 import api_url from '../config'
 import { useNavigate } from 'react-router-dom'
-
+import { React, Typography } from 'react'
 const url = api_url + 'user/create-doctor'
 
 const CreateDEOForm = () => {
