@@ -57,13 +57,10 @@ function isPasswordValid(password) {
   if (!hasSpecialChar) {
     return 'Password must contain at least one special character.'
   }
-
-  // All constraints passed, password is valid
   return ''
 }
 
 const createDeoCredentials = asyncHandler(async (req, res) => {
-  // create random password of 6 characters
   // const password = randomPasswordGen();
   // req.body.password = password;
   //console.log(password);
@@ -72,7 +69,7 @@ const createDeoCredentials = asyncHandler(async (req, res) => {
 
   //console.log(user);
   //send email to deo with temporary password
-  if (isPasswordValid(req.body.password) == '') {
+  if (isPasswordValid(req.body.password) === '') {
     user = await User.create(req.body)
     try {
       sendTemporaryPassword(req.body.name, req.body.email, req.body.password)
@@ -84,13 +81,6 @@ const createDeoCredentials = asyncHandler(async (req, res) => {
     res.status(400)
     throw new Error(isPasswordValid(req.body.password))
   }
-  // await emailQueue.add(`${Date.now()}`, {
-  //     name: req.body.name,
-  //     email: req.body.email,
-  //     password: req.body.password
-  // })
-
-  //console.log("Hi9")
 
   res.json(user)
 })
@@ -103,11 +93,8 @@ const createDoctorCredentials = asyncHandler(async (req, res) => {
 
   let user = null
   try {
-    //console.log(req.body)
     user = await User.create(req.body)
-    //send email to deo with temporary password
     // sendTemporaryPassword(req.body.name, req.body.email, req.body.password)
-    console.log('dhd')
   } catch (e) {
     console.log(e)
     res.status(400)

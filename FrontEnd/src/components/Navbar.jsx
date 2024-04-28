@@ -70,9 +70,9 @@ function Navbar() {
             </div>
           </Link>
 
-          {!authCtx.isAdmin && (
+          {(authCtx.isAdmin || authCtx.isDoc) && (
             <>
-              <Seperator />
+              {/* <Seperator />
               <Link
                 to="/add-refugee"
                 className={` py-3 px-6 bg-yellow ${
@@ -89,8 +89,8 @@ function Navbar() {
                 }`}
               >
                 ADD MEDICINE
-              </Link>
-              <Seperator />
+              </Link> */}
+              {/* <Seperator /> */}
               <Link
                 to="/consult"
                 className={` py-3 px-6 hover:bg-yellow ${

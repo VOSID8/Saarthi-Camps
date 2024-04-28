@@ -135,6 +135,7 @@ const Login = () => {
         </section>
       )}
       <Snackbar
+        id="errmsg"
         autoHideDuration={2000}
         color="danger"
         variant="solid"
