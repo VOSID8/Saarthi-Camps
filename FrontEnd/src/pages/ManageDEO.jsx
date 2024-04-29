@@ -84,93 +84,108 @@ const CreateDEOForm = () => {
             console.log(error)
             setErrMsg(error.response.data.message)
             setOpen(true)
+            setProcessing(false)
             console.log(error)
           })
       } catch (error) {
         setErrMsg(error)
         setOpen(true)
+        setProcessing(false)
         alert(error)
       }
-      setProcessing(false)
     }
   }
 
   return (
     <div className="w-[100vw] h-[100vh] m-0 p-0 flex bg-family bg-cover bg-right md:bg-top">
-      {success ? (
-        <section className="text-center h-[80px] m-15 outline w-[350px] m-auto  bg-white">
-          <h2 className="font-bold">DEO Created Successfully!</h2>
-          <br />
-        </section>
-      ) : (
-        <section className="text-left p-10  w-[350px] m-auto md:mr-[10vw] bg-white ">
-          <h2 className="pb-5 text-center font-bold">CREATE DEO</h2>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username" className="font-regular">
-              USERNAME
-            </label>
+      <section className="text-left p-10  w-[350px] h-[75%] m-auto mt-[110px] md:mr-[10vw] bg-white flex flex-col justify-center ">
+        {success ? (
+          <div className="text-center">
+            <label className="pb-5 font-bold">
+              Data Entry Operator Added Sucessfully
+            </label>{' '}
             <br />
-            <input
-              type="username"
-              id="username"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              required
-              className=" p-2 w-full border-b-2 mb-8 focus:outline-none"
-            />
-            <br />
-
-            <label htmlFor="email" className="font-regular">
-              EMAIL
-            </label>
-            <br />
-            <input
-              type="email"
-              id="email"
-              ref={userRef}
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              required
-              className="p-2 w-full border-b-2 mb-8 focus:outline-none"
-            />
-            <br />
-            <label htmlFor="email" className="font-regular">
-              Create Password
-            </label>
-            <br />
-            <div className="flex">
-              {' '}
+            <div className="flex mt-6">
+              <button
+                className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none"
+                onClick={() => window.location.reload()}
+              >
+                Add Another DEO
+              </button>
+            </div>
+            <div className="flex mt-6"></div>
+          </div>
+        ) : (
+          <div>
+            <h2 className="pb-5 text-center font-bold">CREATE DEO</h2>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="username" className="font-regular">
+                USERNAME
+              </label>
+              <br />
               <input
-                type={passType}
-                id="password"
+                type="username"
+                id="username"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                required
+                className=" p-2 w-full border-b-2 mb-8 focus:outline-none"
+              />
+              <br />
+
+              <label htmlFor="email" className="font-regular">
+                EMAIL
+              </label>
+              <br />
+              <input
+                type="email"
+                id="email"
                 ref={userRef}
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 required
                 className="p-2 w-full border-b-2 mb-8 focus:outline-none"
               />
-              <div className="opacity-[80%]" onClick={handlePassType}>
-                <img
-                  src={passType === 'password' ? hidePassword : viewPassword}
-                  className="h-[35px]"
+              <br />
+              <label htmlFor="email" className="font-regular">
+                Create Password
+              </label>
+              <br />
+              <div className="flex">
+                {' '}
+                <input
+                  type={passType}
+                  id="password"
+                  ref={userRef}
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                  required
+                  className="p-2 w-full border-b-2 mb-8 focus:outline-none"
                 />
+                <div className="opacity-[80%]" onClick={handlePassType}>
+                  <img
+                    src={passType === 'password' ? hidePassword : viewPassword}
+                    className="h-[35px]"
+                  />
+                </div>
               </div>
-            </div>
-            <br />
+              <br />
 
-            <button
-              id="add-deo"
-              className="p-2 px-10 bg-yellow font-semibold hover:outline transition-colors duration-150 rounded-none"
-            >
-              {processing ? (
-                <CircularProgress color="inherit" size="25px" />
-              ) : (
-                'CREATE DEO'
-              )}
-            </button>
-          </form>
-        </section>
-      )}
+              <button
+                id="add-deo"
+                className="p-2 px-10 bg-yellow font-semibold hover:outline transition-colors duration-150 rounded-none"
+              >
+                {processing ? (
+                  <CircularProgress color="inherit" size="25px" />
+                ) : (
+                  'CREATE DEO'
+                )}
+              </button>
+            </form>
+          </div>
+        )}
+      </section>
+
       <Snackbar
         autoHideDuration={2000}
         color="danger"

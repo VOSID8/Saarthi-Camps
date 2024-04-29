@@ -15,7 +15,6 @@ function RefugeeDetails() {
         Authorization: `Bearer ${token}`,
       },
     }
-
     axios
       .get(`${api_url}refugee/${refugeeId}`, config)
       .then((response) => {
@@ -38,16 +37,30 @@ function RefugeeDetails() {
   }
 
   return (
-    <div>
+    <div className="h-[100%]">
       <h2>Refugee Details</h2>
       <input
         type="text"
+        id="enter_id"
+        style={{ padding: 3, marginTop: 5 }}
         placeholder="Enter Refugee ID"
         value={refugeeId}
         onChange={(e) => setRefugeeId(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
-
+      <button
+        id="submit_id"
+        style={{
+          paddingHorizontal: 20,
+          paddingVertical: 5,
+          backgroundColor: 'black',
+          color: 'white',
+          fontSize: 10,
+          marginLeft: 10,
+        }}
+        onClick={handleSearch}
+      >
+        Search
+      </button>
       {refugeeDetails && (
         <div className=" pl-3 items-start">
           <section className="flex items-start">

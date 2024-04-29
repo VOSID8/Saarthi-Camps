@@ -92,6 +92,7 @@ function Navbar() {
               </Link> */}
               {/* <Seperator /> */}
               <Link
+                id="consult"
                 to="/consult"
                 className={` py-3 px-6 hover:bg-yellow ${
                   activePage === '/consult' ? 'active  border-b-2' : ''
@@ -101,6 +102,7 @@ function Navbar() {
               </Link>
               <Seperator />
               <Link
+                id="view-details"
                 to="/view-details"
                 className={`hidden md:block py-3 px-6 hover:bg-yellow ${
                   activePage === '/view-details' ? 'active  border-b-2' : ''
