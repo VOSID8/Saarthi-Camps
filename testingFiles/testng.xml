@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="AuthLogin">
+<suite preserve-order="false" name="Saarthi Test">
+  <test preserve-order="true" thread-count="3" name="AuthLoginTest">
     <classes>
       <class name="com.Saarthi.Saarthi">
 		  <methods>
@@ -11,9 +11,8 @@
 		  </methods>
 	  </class>
     </classes>
-  </test>  
-  
-  <test thread-count="5" name="AddDeo">
+  </test>
+  <test preserve-order="true" thread-count="3" name="AddAccountTest">
     <classes>
       <class name="com.Saarthi.Saarthi">
 		  <methods>
@@ -26,5 +25,44 @@
 		  </methods>
 	  </class>
     </classes>
-  </test><!-- Test -->
+  </test>
+  <test preserve-order="true" thread-count="3" name="AddDocTest">
+    <classes>
+      <class name="com.Saarthi.Saarthi">
+		  <methods>
+			   <include name="AdminLogin"/>
+			   <include name="MoveToDoc"/>
+			   <include name="AddDoc"/>
+			   <include name="MoveToHome"/>
+		  </methods>
+	  </class>
+    </classes>
+  </test>  
+  <test preserve-order="true" thread-count="3" name="AddRefugeeTest">
+    <classes>
+      <class name="com.Saarthi.Saarthi">
+		  <methods>
+			   <include name="AdminLogin"/>
+			   <include name="moveToRefugeeForm"/>
+			   <include name="AddRefugee"/>
+			   <include name="moveToViewDetails"/>
+			   <include name="viewRefugeeDetails"/>
+		  </methods>
+	  </class>
+    </classes>
+  </test>  
+  <test preserve-order="true" thread-count="3" name="AddMedicineTest">
+    <classes>
+      <class name="com.Saarthi.Saarthi">
+		  <methods>
+			   <include name="AdminLogin"/>
+			   <include name="moveToAddMedicinePage"/>
+			   <include name="addMedicine"/>
+			   <include name="moveToViewDetails"/>
+			   <include name="viewRefugeeDetails"/>
+		  </methods>
+	  </class>
+    </classes>
+  </test>  
+  <!-- Test -->
 </suite> <!-- Suite -->

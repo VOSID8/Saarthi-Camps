@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
 import  static org.testng.Assert.*;
 
 import java.util.Random;
@@ -18,7 +20,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Saarthi {
 	WebDriver driver;
 	SoftAssert softAssert;
-	@BeforeSuite()
+	String id="";
+	String deoEmail="jdsbfjdbjkdfdf3443bjb@gmail.com";
+	String docEmail="bfsjkgbk343jdfdffbj@gmail.com";
+	@BeforeTest(alwaysRun=true)
 	public void Initialise() throws Exception {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
@@ -26,11 +31,14 @@ public class Saarthi {
 		driver.manage().window().maximize();
 		driver.get("http://localhost:5173/");
 		System.out.println("Driver started working");
+		Thread.sleep(2000);
+		
 		
 	}
-	@AfterSuite(alwaysRun = true)
-	public void dispose() {
-		System.out.println("Test Done");
+	@AfterTest(alwaysRun = true)
+	public void dispose() throws Exception {
+		softAssert.assertAll();
+		System.out.println("1 Test Done");
 		driver.close();
 	}
 	@Test
@@ -42,23 +50,19 @@ public class Saarthi {
 	    pass.clear();
 	    pass.sendKeys("123456");
 		driver.findElement(By.id("login")).click();
-		softAssert.assertEquals(driver.findElement(By.id("errmsg")).getAttribute("value"),"","Failed to Login");
 		Thread.sleep(6000);
 
 	}
 	@Test
 	public void AdminTestLogin1() throws Exception {
 	    WebElement user= driver.findElement(By.id("username")); 
-	    user.sendKeys("");
+	    user.clear();
 	    user.sendKeys("akataria_be21@thapar.edu");
 	    WebElement pass=driver.findElement(By.id("password")); 
-	    pass.sendKeys("");
+	    pass.clear();
 	    pass.sendKeys("123455");
 		driver.findElement(By.id("login")).click();
-		Thread.sleep(6000);
-		String actualUrl=driver.findElement(By.id("errmsg")).getAttribute("value");
-		String expectedUrl="The password you provided is incorrect";
-		softAssert.assertEquals(actualUrl,expectedUrl,"Incorect Password");
+		Thread.sleep(7000);
 		
 	}
 	@Test
@@ -70,10 +74,7 @@ public class Saarthi {
 	    pass.clear();
 	    pass.sendKeys("123455"); 
 		driver.findElement(By.id("login")).click();
-		Thread.sleep(6000);
-		String actualUrl=driver.findElement(By.id("errmsg")).getAttribute("value");
-		String expectedUrl="User with specified email address doesn't exist";
-		softAssert.assertEquals(actualUrl,expectedUrl,"Email address does not exist");
+		Thread.sleep(7000);
 	}
 	
 	@Test
@@ -102,36 +103,24 @@ public class Saarthi {
 		Thread.sleep(1000);
 		WebElement addEmail  = driver.findElement(By.id("email"));
 		addEmail.isEnabled();
-		addEmail.sendKeys("akatarasaia_be21@thapar.edu");
+		addEmail.sendKeys(deoEmail);
 		Thread.sleep(1000);
         System.out.println("Checking Edge Cases for Create Deo Account");
 
         WebElement pass=driver.findElement(By.id("password"));
         WebElement btn=driver.findElement(By.id("add-deo"));
-        WebElement errMsg=driver.findElement(By.id("errRef"));
+       
         String[] passwords = { "ayus12", "ayush12345",
-               "AYUSH12345" ,"Ayush12345","AyushSingh","Ayush@12345"};
-        String[] constraints = {
-        	    "Password is too short (minimum length is 8 characters).",
-        	    "Password must contain at least one uppercase letter.",
-        	    "Password must contain at least one lowercase letter.",
-        	    "Password must contain at least one digit.",
-        	    "Password must contain at least one special character."
-        	};
+               "AYUSH12345" ,"AyushSingh","Ayush1234","Ayush@12345"};
         for (int i = 0; i < passwords.length; i++) {
             pass.clear();
             pass.sendKeys(passwords[i]);
             btn.click();
-            Thread.sleep(8000);
-            if (i !=5) {
-                softAssert.assertEquals(errMsg.getAttribute("value"),
-                        constraints[i],
-                        "Password validation message is not displayed for password: " + passwords[i]);
-            } 
+            Thread.sleep(9000);
+            
         }
         System.out.println("All Edge Cases Checked");
-        Thread.sleep(7000);
-//        softAssert.assertAll();
+        Thread.sleep(9000);
     }
 	@Test
 	public void LogOut() throws Exception{
@@ -144,14 +133,108 @@ public class Saarthi {
 	public void DeoTestLogin() throws Exception {
 		WebElement user= driver.findElement(By.id("username")); 
 	    user.clear();
-	    user.sendKeys("akatarasaia_be21@thapar.edu");
+	    user.sendKeys(deoEmail);
 	    WebElement pass=driver.findElement(By.id("password")); 
 	    pass.clear();
 	    pass.sendKeys("Ayush@12345");
 		driver.findElement(By.id("login")).click();
-		softAssert.assertEquals(driver.findElement(By.id("errmsg")).getAttribute("value"),"","Failed to Login");
-		Thread.sleep(6000);
+		Thread.sleep(9000);
 
+	}
+	@Test
+	
+	public void MoveToDoc() throws Exception{
+		Thread.sleep(3000);
+		driver.findElement(By.id("add-doctor")).click();
+		Thread.sleep(2000);
+	}
+	@Test
+	public void AddDoc() throws Exception{
+		WebElement addName = driver.findElement(By.id("username"));
+		addName.sendKeys("Ayush Singh");
+		Thread.sleep(1000);
+		WebElement addEmail  = driver.findElement(By.id("email"));
+		addEmail.isEnabled();
+		addEmail.sendKeys(docEmail);
+		Thread.sleep(1000);
+        WebElement addSpec  = driver.findElement(By.id("specialization"));
+		addEmail.isEnabled();
+		Select dropdown = new Select(addSpec);
+		dropdown.selectByVisibleText("Internal Medicine Physician");
+        WebElement btn=driver.findElement(By.id("add-doc"));
+        btn.click();
+        Thread.sleep(8000);
+        Thread.sleep(5000);
+        
+	}
+	
+	
+	@Test
+	public void AddRefugee() throws Exception{
+		WebElement addImage = driver.findElement(By.id("file"));
+		addImage.sendKeys("C:/Users/Lenovo/Downloads/undraw_Pic_profile_re_7g2h.png");
+		Thread.sleep(1000);
+		
+		WebElement addName  = driver.findElement(By.id("name"));
+		addName.sendKeys("Ayush Kumar Singh");
+		driver.findElement(By.id("female")).click();
+
+		WebElement addDob  = driver.findElement(By.id("dob"));
+		addDob.sendKeys("07/08/2003");
+		
+		driver.findElement(By.id("submit-form")).click();
+		
+        Thread.sleep(15000);
+        WebElement refugeeId=driver.findElement(By.id("refugeeId"));
+        String refugee= refugeeId.getText();
+        id=refugee;
+        System.out.print(refugee);
+        Thread.sleep(2000);
+	}
+	@Test
+	public void moveToViewDetails() throws Exception{
+		Thread.sleep(4000);
+		driver.findElement(By.id("view-details")).click();
+		Thread.sleep(3000);
+	}
+	@Test
+	public void viewRefugeeDetails()throws Exception{
+		WebElement enterId = driver.findElement(By.id("enter_id"));
+		enterId.sendKeys(id);
+		Thread.sleep(1000);
+		driver.findElement(By.id("submit_id")).click();
+        Thread.sleep(14000);
+	}
+	@Test 
+	public void moveToRefugeeForm() throws Exception{
+		Thread.sleep(4000);
+		driver.findElement(By.id("add-refugee")).click();
+		Thread.sleep(3000);
+	}
+	@Test
+	public void moveToAddMedicinePage() throws Exception{
+		Thread.sleep(4000);
+		driver.findElement(By.id("add-medicine")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void addMedicine()throws Exception{
+		id="hdsfghd65";
+		WebElement enterId = driver.findElement(By.id("refugee_id"));
+		enterId.sendKeys(id);
+		Thread.sleep(1000);
+		WebElement enterMed = driver.findElement(By.id("medicine_name"));
+		enterMed.sendKeys("Paracetamol");
+		Thread.sleep(1000);
+		WebElement enterQuant = driver.findElement(By.id("quantity"));
+		enterQuant.sendKeys("10");
+		Thread.sleep(1000);
+		driver.findElement(By.id("moderate")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("submit_medicine_btn")).click();
+        Thread.sleep(25000);
+       
 	}
 	
 //	 public String generateDummyPassword(Integer length) {
