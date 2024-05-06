@@ -37,14 +37,16 @@ function RefugeeDetails() {
 
   return (
     <div>
-      <h2>Refugee Details</h2>
+      <h2 className='text-2xl font-semibold mb-5'>Refugee Details</h2>
+      <br />
       <input
         type="text"
         placeholder="Enter Refugee ID"
         value={refugeeId}
         onChange={(e) => setRefugeeId(e.target.value)}
+        className='px-5 py-3 outline'
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className='ml-5 px-5 bg-yellow rounded-none'>SEARCH</button>
 
       {refugeeDetails && (
         <div className=''>

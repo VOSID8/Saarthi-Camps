@@ -114,6 +114,9 @@ function Registration() {
   const handleMeds = () => {
     navigate('/add-medicine');
   }
+  const handleConsult = () => {
+    navigate('/consult');
+  }
 
   const [imagePreview, setImagePreview] = useState(null);
   const handleFileChange = (e) => {
@@ -247,12 +250,12 @@ function Registration() {
       <p>Form submitted successfully.</p> <br />
       <p>Your Registration Number is <strong> {refugeeID} </strong></p>
 
-      <div className="flex mt-6">
+      <div className="flex mt-6 mb-2">
         <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none mr-2" onClick={handleMeds}>Add Medicine</button>
-        <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none" onClick={() => window.location.reload()}>Consult a Specialist</button>
-        <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none" onClick={() => window.location.reload()}>New Form</button>
+        <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none" onClick={handleConsult}>Consult a Specialist</button>
         
       </div>
+        <button className="p-2 px-10 w-full font-semibold bg-yellow hover:outline transition-transform rounded-none" onClick={() => window.location.reload()}>New Form</button>
     </div>
   )
 

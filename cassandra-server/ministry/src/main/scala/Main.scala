@@ -52,6 +52,11 @@ object main extends App {
     .selectExpr("CAST(value AS STRING)")
     .select(from_json($"value", schema).as("data"))
     .select("data.*")
+  // val mainDb = spark.read
+  //     .format("org.apache.spark.sql.cassandra")
+  //     .option("keyspace", "camp_db")
+  //     .option("table", "main")
+  //     .load()
 
   val aggDF = jsonStreamDF
     .withColumn("campid", substring($"refugeeid", 0, 2))

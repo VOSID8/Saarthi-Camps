@@ -1,0 +1,83 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(d025d3fd-2a5a-455f-865c-115f6fa15e92), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to C:\Projects\Saarthi-Camps\cassandra-server\ministry\target\scala-2.12\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0morg.apache.spark.sql.streaming.StreamingQueryException: assertion failed: There are no contact points in the given set of hosts[0m
+[0m[[0m[31merror[0m] [0m[0m=== Streaming Query ===[0m
+[0m[[0m[31merror[0m] [0m[0mIdentifier: [id = a7b3551b-96b5-4b3d-b352-e754ea543791, runId = fec37dfc-1b3e-4774-9fdf-d7132d693832][0m
+[0m[[0m[31merror[0m] [0m[0mCurrent Committed Offsets: {}[0m
+[0m[[0m[31merror[0m] [0m[0mCurrent Available Offsets: {KafkaV2[Subscribe[CampInfo]]: {"CampInfo":{"0":0}}}[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mCurrent State: ACTIVE[0m
+[0m[[0m[31merror[0m] [0m[0mThread State: RUNNABLE[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mLogical Plan:[0m
+[0m[[0m[31merror[0m] [0m[0mProject [refugeeid#25, medicinename#26, medicinequantity#27, medicineurgency#28, substring(refugeeid#25, 0, 2) AS campid#35][0m
+[0m[[0m[31merror[0m] [0m[0m+- Project [data#23.refugeeid AS refugeeid#25, data#23.medicinename AS medicinename#26, data#23.medicinequantity AS medicinequantity#27, data#23.medicineurgency AS medicineurgency#28, data#23.campid AS campid#29][0m
+[0m[[0m[31merror[0m] [0m[0m   +- Project [from_json(StructField(refugeeid,StringType,false), StructField(medicinename,StringType,false), StructField(medicinequantity,IntegerType,false), StructField(medicineurgency,IntegerType,false), StructField(campid,StringType,false), value#21, Some(Asia/Calcutta)) AS data#23][0m
+[0m[[0m[31merror[0m] [0m[0m      +- Project [cast(value#8 as string) AS value#21][0m
+[0m[[0m[31merror[0m] [0m[0m         +- StreamingDataSourceV2Relation [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaScan@5b1c10a8, KafkaV2[Subscribe[CampInfo]][0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:355)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:245)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.AssertionError: assertion failed: There are no contact points in the given set of hosts[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Predef$.assert(Predef.scala:223)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.LocalNodeFirstLoadBalancingPolicy$.determineDataCenter(LocalNodeFirstLoadBalancingPolicy.scala:195)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.$anonfun$dataCenterNodes$1(CassandraConnector.scala:193)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Option.getOrElse(Option.scala:189)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.dataCenterNodes(CassandraConnector.scala:193)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.alternativeConnectionConfigs(CassandraConnector.scala:208)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.$anonfun$sessionCache$3(CassandraConnector.scala:170)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.createNewValueAndKeys(RefCountedCache.scala:34)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.syncAcquire(RefCountedCache.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.acquire(RefCountedCache.scala:57)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector.openSession(CassandraConnector.scala:90)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector.withSessionDo(CassandraConnector.scala:112)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraCatalog$.com$datastax$spark$connector$datasource$CassandraCatalog$$getMetadata(CassandraCatalog.scala:455)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraCatalog$.getTableMetaData(CassandraCatalog.scala:421)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.cassandra.DefaultSource.getTable(DefaultSource.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.cassandra.DefaultSource.inferSchema(DefaultSource.scala:72)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.DataSourceV2Utils$.getTableFromProvider(DataSourceV2Utils.scala:81)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.getTable$1(DataFrameWriter.scala:304)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:320)[0m
+[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1(Main.scala:77)[0m
+[0m[[0m[31merror[0m] [0m[0m	at main$.$anonfun$invoiceWriterQuery$1$adapted(Main.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:36)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:573)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:100)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:160)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:87)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:763)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$15(MicroBatchExecution.scala:571)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:352)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:350)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:571)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:223)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:352)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:350)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:191)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:57)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:185)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:334)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:245)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) org.apache.spark.sql.streaming.StreamingQueryException: assertion failed: There are no contact points in the given set of hosts[0m
+[0m[[0m[31merror[0m] [0m[0m=== Streaming Query ===[0m
+[0m[[0m[31merror[0m] [0m[0mIdentifier: [id = a7b3551b-96b5-4b3d-b352-e754ea543791, runId = fec37dfc-1b3e-4774-9fdf-d7132d693832][0m
+[0m[[0m[31merror[0m] [0m[0mCurrent Committed Offsets: {}[0m
+[0m[[0m[31merror[0m] [0m[0mCurrent Available Offsets: {KafkaV2[Subscribe[CampInfo]]: {"CampInfo":{"0":0}}}[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mCurrent State: ACTIVE[0m
+[0m[[0m[31merror[0m] [0m[0mThread State: RUNNABLE[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mLogical Plan:[0m
+[0m[[0m[31merror[0m] [0m[0mProject [refugeeid#25, medicinename#26, medicinequantity#27, medicineurgency#28, substring(refugeeid#25, 0, 2) AS campid#35][0m
+[0m[[0m[31merror[0m] [0m[0m+- Project [data#23.refugeeid AS refugeeid#25, data#23.medicinename AS medicinename#26, data#23.medicinequantity AS medicinequantity#27, data#23.medicineurgency AS medicineurgency#28, data#23.campid AS campid#29][0m
+[0m[[0m[31merror[0m] [0m[0m   +- Project [from_json(StructField(refugeeid,StringType,false), StructField(medicinename,StringType,false), StructField(medicinequantity,IntegerType,false), StructField(medicineurgency,IntegerType,false), StructField(campid,StringType,false), value#21, Some(Asia/Calcutta)) AS data#23][0m
+[0m[[0m[31merror[0m] [0m[0m      +- Project [cast(value#8 as string) AS value#21][0m
+[0m[[0m[31merror[0m] [0m[0m         +- StreamingDataSourceV2Relation [key#7, value#8, topic#9, partition#10, offset#11L, timestamp#12, timestampType#13], org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaScan@5b1c10a8, KafkaV2[Subscribe[CampInfo]][0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 24 s, completed 24-Nov-2023, 12:57:35 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

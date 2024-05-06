@@ -21,7 +21,8 @@ export default {
       'meds' : "url('./src/assets/bg/meds.jpg')",
       'camp' : "url('./src/assets/bg/bg1.jpg')",
       'family' : "url('./src/assets/bg/fam.jpg')",
-      'medcamp' : "url('./src/assets/bg/bg2.jpeg')"
+      'medcamp' : "url('./src/assets/bg/bg2.jpeg')",
+      'doc' : "url(./src/assets/bg/bg5.jpg)"
     }
   },
   plugins: [],

@@ -1481,3 +1481,833 @@ WARNING: Unmatched cancel notification for request id 1484
 2023.11.22 19:24:29 INFO  Shutting down server
 2023.11.22 19:24:29 INFO  shutting down Metals
 2023.11.22 19:24:29 INFO  Exiting server
+2023.11.23 21:22:45 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.84.2.
+2023.11.23 21:22:46 WARN  Build server is not auto-connectable.
+2023.11.23 21:22:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Nov 23, 2023 9:22:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.11.23 21:22:54 INFO  no build target found for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.11.23 21:22:56 INFO  time: code lens generation in 7.37s
+2023.11.23 21:26:51 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala.scala
+2023.11.23 21:26:51 WARN  Could not find semantic tokens for: file:///C:/Projects/Saarthi-Camps/cassandra-server/ministry/src/main/scala/admin.scala.scala
+2023.11.23 21:27:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:27:02 WARN  Could not find semantic tokens for: file:///C:/Projects/Saarthi-Camps/cassandra-server/ministry/src/main/scala/admin.scala
+2023.11.23 21:27:02 WARN  Could not find semantic tokens for: file:///C:/Projects/Saarthi-Camps/cassandra-server/ministry/src/main/scala/admin.scala
+2023.11.23 21:27:12 WARN  Could not find semantic tokens for: file:///C:/Projects/Saarthi-Camps/cassandra-server/ministry/src/main/scala/admin.scala
+2023.11.23 21:30:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+Nov 23, 2023 9:30:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 68
+2023.11.23 21:30:21 WARN  Could not find semantic tokens for: file:///C:/Projects/Saarthi-Camps/cassandra-server/ministry/src/main/scala/admin.scala
+2023.11.23 21:30:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:32:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:32:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:32:57 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:00 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:11 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 9:33:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 186
+2023.11.23 21:33:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:32 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:33:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:35:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:36:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:36:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:37:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:37:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:38:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:44:57 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:44:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:45:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:47:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:57:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:57:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 9:58:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 545
+2023.11.23 21:58:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 21:58:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 10:01:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 600
+2023.11.23 22:01:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:04:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:05:52 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 10:06:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 785
+2023.11.23 22:07:02 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:07:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:07:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:07:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:07:57 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:08:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:08:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:08:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:08:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:10:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:10:08 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:10:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:10:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:10:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:10:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 10:12:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1019
+2023.11.23 22:14:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:34:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:34:59 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:33: error: unclosed string literal
+      .option("table", "m)
+                       ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.23 22:35:00 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:35:02 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 10:39:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1127
+2023.11.23 22:39:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 22:40:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 22:40:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 22:40:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 22:48:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 10:54:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1227
+2023.11.23 22:55:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:55:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:56:14 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:56:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:56:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:56:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:56:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:58:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:58:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 10:59:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1403
+Nov 23, 2023 10:59:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1410
+2023.11.23 22:59:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 22:59:29 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:01:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:01:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:01:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:01:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1491
+2023.11.23 23:01:57 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:04:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1516
+Nov 23, 2023 11:04:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1537
+2023.11.23 23:04:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:05:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:05:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1608
+Nov 23, 2023 11:05:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1624
+2023.11.23 23:05:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:05:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:05:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:05:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:05:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+Nov 23, 2023 11:05:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1696
+2023.11.23 23:05:58 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+scala.meta.tokenizers.TokenizeException: <input>:58: error: unclosed character literal
+      .option("table", '')
+                       ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchSingleQuote$1(LegacyScanner.scala:407)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:412)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.23 23:06:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:06:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:06:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1745
+Nov 23, 2023 11:06:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1771
+2023.11.23 23:06:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:07:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.23 23:11:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:12:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:13:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:13:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:13:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:13:55 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:13:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:14:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1892
+2023.11.23 23:14:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:14:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:16:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:20:02 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:20:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:20:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+Nov 23, 2023 11:20:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1995
+Nov 23, 2023 11:20:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1996
+2023.11.23 23:20:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:20:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:20:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:20:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:24:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:24:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:29:51 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:30:03 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:30:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:30:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:30:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+Nov 23, 2023 11:30:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2135
+2023.11.23 23:30:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.23 23:33:32 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:33:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:14 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:29 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:37 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:34:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2282
+2023.11.23 23:34:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:34:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:35:00 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:37:21 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:37:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:37:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:37:29 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:37:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:37:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:38:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:38:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:38:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:38:58 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:39:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:39:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:39:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:39:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2493
+2023.11.23 23:39:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 23, 2023 11:40:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2512
+2023.11.23 23:40:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:35 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:37 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.23 23:40:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:45:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:46:03 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:46:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:52:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:53:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:53:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:53:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:53:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:53:52 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:53:55 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:54:11 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:54:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2758
+Nov 24, 2023 12:54:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2759
+2023.11.24 00:54:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:54:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2787
+2023.11.24 00:54:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:54:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2815
+2023.11.24 00:54:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:54:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:54:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:54:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:54:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:55:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:55:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:55:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2931
+2023.11.24 00:55:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:55:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2947
+2023.11.24 00:55:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:55:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2965
+Nov 24, 2023 12:55:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2966
+2023.11.24 00:55:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:55:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:58:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:58:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 12:58:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3026
+Nov 24, 2023 12:58:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3027
+2023.11.24 00:58:32 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 00:59:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:00:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3089
+2023.11.24 01:00:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:00:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3123
+Nov 24, 2023 1:00:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3127
+2023.11.24 01:00:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:37 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:43 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:00:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:01:02 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:01:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:01:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3258
+2023.11.24 01:01:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:01:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:01:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:01:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:02:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:03:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3332
+2023.11.24 01:03:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:03:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:03:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:03:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:03:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:03:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:03:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:04:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:17:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:18:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:18:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:18:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:19:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3644
+2023.11.24 01:19:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:28 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:31 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:19:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:19:55 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3721
+2023.11.24 01:19:58 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:00 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:08 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:20:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:21:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3845
+2023.11.24 01:21:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:21:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:21:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3880
+2023.11.24 01:21:21 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:21:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3896
+2023.11.24 01:21:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:21:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3908
+2023.11.24 01:21:33 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:21:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:21:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:52 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:30:58 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:00 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:02 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:04 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:31:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4234
+2023.11.24 01:31:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:31:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4252
+2023.11.24 01:31:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:31:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4262
+Nov 24, 2023 1:31:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4269
+Nov 24, 2023 1:31:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4271
+2023.11.24 01:31:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:31:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4291
+2023.11.24 01:31:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:55 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:31:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:31:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4313
+2023.11.24 01:32:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:32:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4337
+2023.11.24 01:32:23 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:42: error: unclosed string literal
+            else"
+                ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 01:32:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:32:23 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:42: error: unclosed string literal
+            else"
+                ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 01:32:26 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:32:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:32:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4381
+Nov 24, 2023 1:32:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4382
+2023.11.24 01:32:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:32:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:34:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:34:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:35:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:35:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:35:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:35:33 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:30: error: unclosed string interpolation
+            val campDF = cassandraDF.filter(campid" != campId)
+                                                   ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringPart(LegacyScanner.scala:659)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:357)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 01:35:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:35:34 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:30: error: unclosed string interpolation
+            val campDF = cassandraDF.filter(campid" != campId)
+                                                   ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringPart(LegacyScanner.scala:659)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:357)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 01:35:36 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:30: error: unclosed string literal
+            val campDF = cassandraDF.filter('campid" != campId)
+                                                   ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 01:35:37 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:35:37 ERROR Failed to tokenize input for semantic tokens for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+scala.meta.tokenizers.TokenizeException: <input>:30: error: unclosed string literal
+            val campDF = cassandraDF.filter('campid" != campId)
+                                                   ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 01:35:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:38:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 1:38:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4504
+2023.11.24 01:39:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:41:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:41:36 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:41:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:09 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:16 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:21 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:42:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:45:08 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:45:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:47:03 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 01:49:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:08 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:22 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:32 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:19:58 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:20:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:21:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:22:15 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 2:22:16 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5024
+Nov 24, 2023 2:22:16 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5025
+2023.11.24 02:22:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:22:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 2:22:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5051
+2023.11.24 02:22:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 2:22:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5071
+Nov 24, 2023 2:22:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5072
+Nov 24, 2023 2:22:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5084
+2023.11.24 02:22:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:23:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:23:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:23:21 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:23:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:24:25 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:25:07 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:26:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:28:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:28:32 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:30:27 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:33:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:37:59 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 02:40:56 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:17:47 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:18:03 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 3:26:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5317
+Nov 24, 2023 3:26:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5318
+Nov 24, 2023 3:26:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5320
+Nov 24, 2023 3:26:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5321
+2023.11.24 03:26:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 3:27:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5329
+2023.11.24 03:38:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:38:46 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:42:01 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:42:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:42:07 WARN  Using indexes to guess the definition of campDF
+2023.11.24 03:42:12 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 3:45:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5426
+Nov 24, 2023 3:45:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5425
+2023.11.24 03:45:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:45:38 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:45:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:45:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:45:53 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:45:55 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 3:45:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5506
+Nov 24, 2023 3:45:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5509
+2023.11.24 03:45:58 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:46:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:46:20 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:46:23 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 3:46:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5572
+2023.11.24 03:46:30 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:46:37 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:51:34 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:51:41 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:51:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:51:45 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 3:51:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5662
+2023.11.24 03:51:47 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:51:54 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:51:55 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:52:05 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:52:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:52:14 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:52:17 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 03:55:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 04:00:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 04:03:03 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 04:03:06 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 04:03:10 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 04:03:13 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+Nov 24, 2023 4:15:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5873
+Nov 24, 2023 4:34:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5890
+2023.11.24 04:40:40 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 05:01:42 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 05:01:48 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 05:01:49 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 05:06:18 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 05:06:19 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 05:06:24 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 12:48:47 INFO  Shutting down server
+2023.11.24 12:48:47 INFO  shutting down Metals
+2023.11.24 12:48:47 INFO  Exiting server
+2023.11.24 12:48:47 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2023.11.24 12:51:13 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.84.2.
+2023.11.24 12:51:14 WARN  Build server is not auto-connectable.
+2023.11.24 13:01:39 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala
+2023.11.24 13:01:42 INFO  no build target found for C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\admin.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.11.24 13:01:44 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\src\main\scala\Main.scala
+2023.11.24 13:01:45 INFO  time: code lens generation in 2.44s
+2023.11.24 13:01:50 WARN  no build target for: C:\Projects\Saarthi-Camps\cassandra-server\ministry\build.sbt
+2023.11.24 18:07:13 INFO  Shutting down server
+2023.11.24 18:07:13 INFO  shutting down Metals
+2023.11.24 18:07:13 INFO  Exiting server
+2023.11.24 23:47:19 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.84.2.
+2023.11.24 23:47:21 WARN  Build server is not auto-connectable.
+2023.11.25 00:07:29 INFO  Shutting down server
+2023.11.25 00:07:29 INFO  shutting down Metals
+2023.11.25 00:07:29 INFO  Exiting server
+2023.12.02 22:45:52 INFO  Started: Metals version 1.1.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.84.2.
+2023.12.02 22:45:54 WARN  Build server is not auto-connectable.
+2023.12.02 22:46:18 INFO  Shutting down server
+2023.12.02 22:46:18 INFO  shutting down Metals
+2023.12.02 22:46:18 INFO  Exiting server
+2024.05.06 21:47:26 INFO  Started: Metals version 1.3.0 in folders 'C:\Projects\Saarthi-Camps' for client Visual Studio Code 1.88.1.
+Downloading https://repo1.maven.org/maven2/com/h2database/h2/2.1.214/h2-2.1.214.jar
+Downloaded 602959 bytes
+Downloaded 959041 bytes
+Downloaded 1751617 bytes
+2024.05.06 21:47:34 INFO  Upgraded H2 database.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [scribe.slf4j.ScribeServiceProvider@40a27f1d]
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@2234f0d3]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@40a27f1d]
+2024.05.06 21:47:34 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.

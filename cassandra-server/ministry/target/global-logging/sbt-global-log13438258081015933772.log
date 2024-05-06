@@ -1,0 +1,100 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(bdb10665-49ac-41f8-832c-53e4adb910dd), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[31merror[0m] [0m[0mjava.io.IOException: Failed to open native connection to Cassandra at {localhost:9042} :: Could not reach any contact point, make sure you've provided valid addresses (showing first 2 nodes, use getAllErrors() for more): Node(endPoint=localhost/0:0:0:0:0:0:0:1:9042, hostId=null, hashCode=329d3426): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (com.datastax.oss.driver.shaded.netty.handler.codec.EncoderException: java.lang.OutOfMemoryError: Direct buffer memory)], Node(endPoint=localhost/127.0.0.1:9042, hostId=null, hashCode=69f4f553): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (com.datastax.oss.driver.shaded.netty.handler.codec.EncoderException: java.lang.OutOfMemoryError: Direct buffer memory)][0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.createSession(CassandraConnector.scala:182)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.$anonfun$sessionCache$1(CassandraConnector.scala:170)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.createNewValueAndKeys(RefCountedCache.scala:32)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.syncAcquire(RefCountedCache.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.acquire(RefCountedCache.scala:57)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector.openSession(CassandraConnector.scala:90)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector.withSessionDo(CassandraConnector.scala:112)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraCatalog$.com$datastax$spark$connector$datasource$CassandraCatalog$$getMetadata(CassandraCatalog.scala:455)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraCatalog$.getTableMetaData(CassandraCatalog.scala:421)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.cassandra.DefaultSource.getTable(DefaultSource.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.cassandra.DefaultSource.inferSchema(DefaultSource.scala:72)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.DataSourceV2Utils$.getTableFromProvider(DataSourceV2Utils.scala:81)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.$anonfun$load$1(DataFrameReader.scala:256)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Option.map(Option.scala:230)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:230)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:203)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin$.delayedEndpoint$admin$1(admin.scala:29)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin$delayedInit$body.apply(admin.scala:14)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp(Function0.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp$(Function0.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.App.$anonfun$main$1$adapted(App.scala:80)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:431)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.App.main(App.scala:80)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.App.main$(App.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin$.main(admin.scala:14)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin.main(admin.scala)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.reflect.Method.invoke(Method.java:566)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.invokeMain(Run.scala:144)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.execute$1(Run.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeSuccess(Run.scala:187)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.runWithLoader(Run.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:1988)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1927)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:367)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses (showing first 2 nodes, use getAllErrors() for more): Node(endPoint=localhost/0:0:0:0:0:0:0:1:9042, hostId=null, hashCode=329d3426): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (com.datastax.oss.driver.shaded.netty.handler.codec.EncoderException: java.lang.OutOfMemoryError: Direct buffer memory)], Node(endPoint=localhost/127.0.0.1:9042, hostId=null, hashCode=69f4f553): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (com.datastax.oss.driver.shaded.netty.handler.codec.EncoderException: java.lang.OutOfMemoryError: Direct buffer memory)][0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.oss.driver.api.core.AllNodesFailedException.copy(AllNodesFailedException.java:141)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.oss.driver.api.core.session.SessionBuilder.build(SessionBuilder.java:633)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.DefaultConnectionFactory$.createSession(CassandraConnectionFactory.scala:143)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.createSession(CassandraConnector.scala:176)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector$.$anonfun$sessionCache$1(CassandraConnector.scala:170)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.createNewValueAndKeys(RefCountedCache.scala:32)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.syncAcquire(RefCountedCache.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.RefCountedCache.acquire(RefCountedCache.scala:57)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector.openSession(CassandraConnector.scala:90)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.cql.CassandraConnector.withSessionDo(CassandraConnector.scala:112)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraCatalog$.com$datastax$spark$connector$datasource$CassandraCatalog$$getMetadata(CassandraCatalog.scala:455)[0m
+[0m[[0m[31merror[0m] [0m[0m	at com.datastax.spark.connector.datasource.CassandraCatalog$.getTableMetaData(CassandraCatalog.scala:421)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.cassandra.DefaultSource.getTable(DefaultSource.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.cassandra.DefaultSource.inferSchema(DefaultSource.scala:72)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.datasources.v2.DataSourceV2Utils$.getTableFromProvider(DataSourceV2Utils.scala:81)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.$anonfun$load$1(DataFrameReader.scala:256)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Option.map(Option.scala:230)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:230)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:203)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin$.delayedEndpoint$admin$1(admin.scala:29)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin$delayedInit$body.apply(admin.scala:14)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp(Function0.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp$(Function0.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.App.$anonfun$main$1$adapted(App.scala:80)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:431)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.App.main(App.scala:80)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.App.main$(App.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin$.main(admin.scala:14)[0m
+[0m[[0m[31merror[0m] [0m[0m	at admin.main(admin.scala)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.reflect.Method.invoke(Method.java:566)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.invokeMain(Run.scala:144)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.execute$1(Run.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeSuccess(Run.scala:187)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.runWithLoader(Run.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:1988)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1927)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:367)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) java.io.IOException: Failed to open native connection to Cassandra at {localhost:9042} :: Could not reach any contact point, make sure you've provided valid addresses (showing first 2 nodes, use getAllErrors() for more): Node(endPoint=localhost/0:0:0:0:0:0:0:1:9042, hostId=null, hashCode=329d3426): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (com.datastax.oss.driver.shaded.netty.handler.codec.EncoderException: java.lang.OutOfMemoryError: Direct buffer memory)], Node(endPoint=localhost/127.0.0.1:9042, hostId=null, hashCode=69f4f553): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (com.datastax.oss.driver.shaded.netty.handler.codec.EncoderException: java.lang.OutOfMemoryError: Direct buffer memory)][0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 16 s, completed 24-Nov-2023, 2:29:27 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

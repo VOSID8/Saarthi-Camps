@@ -5,10 +5,14 @@ CREATE TABLE main(RefugeeId text PRIMARY KEY, MedicineName text, MedicineQuantit
 INSERT INTO main (id, MedicineName, MedicineQuantity, MedicineUrgency, CampId)
 VALUES (AH47, {'A':2,'B':2}, 1,AH);
 
+INSERT INTO main (refugeeid, campid, medicinename, medicinequantity, medicineurgency) VALUES (AH47,AH,"dvai", 1,0);
+
 
 {"refugeeid": "AM11","medicinename": "paracetamol","medicinequantity": 1,"medicineurgency": 1}
 
 
+INSERT INTO main (refugeeid, campid, medicinename, medicinequantity, medicineurgency) 
+VALUES ('AM47', 'AM', 'dvai2', 1, 0);
 
 
 

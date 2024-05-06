@@ -94,7 +94,7 @@ function Consultancy() {
                 </div>
 
                 <div className="mb-4">
-                    <label className="w-full flex">service</label>
+                    <label className="w-full flex font-semibold">SERVICE</label>
                     {doctorservices.map((service, index) => (
                         <div key={index} className="m-2 inline-block">
                             <input
@@ -140,7 +140,7 @@ function Consultancy() {
     );
 
     return (
-        <div className="w-[100vw] absolute top-0 bg-medcamp bg-cover h-[100vh]">
+        <div className="w-[100vw] absolute top-0 bg-doc bg-cover h-[100vh]">
             <div className="container p-10 w-[95%] md:w-[50%] shadow-lg bg-white mt-[15vh] m-auto md:absolute md:right-20">
                 <div className="text-2xl pb-8 text-center font-semibold">Live Consultancy</div>
                 <div className="text-left">{isSubmitted ? confirmation : renderForm}</div>
