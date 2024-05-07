@@ -39,6 +39,13 @@ function Navbar() {
             className="h-[50px] md:h-[100px] absolute bg-yellow hidden md:block"
           />
         </Link>
+        <Link to="/data">
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-[50px] md:h-[100px] absolute bg-yellow hidden md:block"
+          />
+        </Link>
       </div>
 
       <div className="flex justify-between items-center w-full bg-white shadow-md md:ml-[110px] font-bold">

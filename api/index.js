@@ -83,7 +83,6 @@ const consultancyRouter = require("./routes/consultancy.routes");
         app.use("/token", forceAuth());
         app.use("/consultancy", forceAuth());
         app.use("/consultancy", dataEntryOperatorOnly());
-
         app.use("/user", userRouter);
         app.use("/refugee", refugeeRouter);
         app.use("/order", orderRouter);

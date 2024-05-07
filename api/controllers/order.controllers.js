@@ -28,6 +28,7 @@ const orderMedicines = asyncHandler(async (req, res) => {
 
 const getAllOrders = asyncHandler(async (req, res) => {
     //Filter
+    console.log("helo")
     const filterObj = { ...req.query };
     const excludeFromFilter = ['sort', 'fields', 'page', 'limit'];
 
@@ -60,7 +61,7 @@ const getAllOrders = asyncHandler(async (req, res) => {
     //Page and limit
     const page = req.query.page;
     let limit = req.query.limit;
-    if (!limit) limit = 20;
+    if (!limit) limit = 200;
 
     const skip = (page - 1) * limit;
     query = query.skip(skip).limit(limit);

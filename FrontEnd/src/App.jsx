@@ -7,7 +7,7 @@ import Details from './pages/Details'
 import Navbar from './components/Navbar'
 import ManageDEO from './pages/ManageDEO'
 import ForgotPassword from './pages/ForgotPwd'
-
+import Data from './pages/Data'
 import AuthContext from './components/AuthProvider2'
 import React, { useContext, useState, useCallback } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -56,6 +56,7 @@ function AppWithSidebar() {
         <Route path="/manage-deo" element={<ManageDEO />} />
         <Route path="/manage-doctor" element={<ManageDoctor />} />
         <Route path="/consult" element={<Consultancy />} />
+        <Route path="/data" element={<Data />} />
         {/* <Route path='/vc-form' element={<ChannelForm selectChannel={selectChannel}/>} /> */}
         {/* <Route path='/call' element={<Call channel={channel}/>} /> */}
       </Routes>

@@ -8,7 +8,7 @@ const {
   sendPasswordResetEmail,
 } = require('../services/emailUtils')
 const { generateAccessToken } = require('../security/accessTokenUtils')
-const { generateRefreshToken } = require('../security/refreshTokenUtils')
+
 
 // const emailQueue = new Queue("email-queue", {
 //     connection: {
